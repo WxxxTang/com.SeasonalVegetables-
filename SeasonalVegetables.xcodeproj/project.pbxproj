@@ -1,0 +1,739 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B0E8D5A1CF761D7003F39C8 /* SVXTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E8D581CF761D7003F39C8 /* SVXTabBarViewController.m */; };
+		3B0E8D6D1CF7649F003F39C8 /* SVXHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E8D6C1CF7649F003F39C8 /* SVXHomeViewController.m */; };
+		3B0E8D701CF764EF003F39C8 /* SVXShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E8D6F1CF764EF003F39C8 /* SVXShopViewController.m */; };
+		3B0E8D791CF7654C003F39C8 /* SVXUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E8D781CF7654C003F39C8 /* SVXUserViewController.m */; };
+		3B0E8D7C1CF76595003F39C8 /* SVXNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E8D7B1CF76595003F39C8 /* SVXNavigationViewController.m */; };
+		663F2AA61CF60E0600F23D40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 663F2AA51CF60E0600F23D40 /* main.m */; };
+		663F2AAF1CF60E0600F23D40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663F2AAD1CF60E0600F23D40 /* Main.storyboard */; };
+		663F2AB11CF60E0600F23D40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 663F2AB01CF60E0600F23D40 /* Assets.xcassets */; };
+		663F2AB41CF60E0600F23D40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663F2AB21CF60E0600F23D40 /* LaunchScreen.storyboard */; };
+		663F2ABF1CF60E0600F23D40 /* SeasonalVegetablesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 663F2ABE1CF60E0600F23D40 /* SeasonalVegetablesTests.m */; };
+		663F2ACA1CF60E0600F23D40 /* SeasonalVegetablesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 663F2AC91CF60E0600F23D40 /* SeasonalVegetablesUITests.m */; };
+		666099B61CF74B90001FAB4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 666099B31CF74B90001FAB4E /* AppDelegate.m */; };
+		666099B71CF74B90001FAB4E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 666099B51CF74B90001FAB4E /* ViewController.m */; };
+		9401D86D3A87C4C74600E499 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0C6063C5F514D5530417DE /* libPods.a */; };
+		B2E2A9B01CF97464009DE9F6 /* SVXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E2A9AF1CF97464009DE9F6 /* SVXLoginViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		663F2ABB1CF60E0600F23D40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 663F2A991CF60E0600F23D40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 663F2AA01CF60E0600F23D40;
+			remoteInfo = SeasonalVegetables;
+		};
+		663F2AC61CF60E0600F23D40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 663F2A991CF60E0600F23D40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 663F2AA01CF60E0600F23D40;
+			remoteInfo = SeasonalVegetables;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B0E8D561CF7605F003F39C8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3B0E8D581CF761D7003F39C8 /* SVXTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXTabBarViewController.m; sourceTree = "<group>"; };
+		3B0E8D591CF761D7003F39C8 /* SVXTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXTabBarViewController.h; sourceTree = "<group>"; };
+		3B0E8D6B1CF7649F003F39C8 /* SVXHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXHomeViewController.h; sourceTree = "<group>"; };
+		3B0E8D6C1CF7649F003F39C8 /* SVXHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXHomeViewController.m; sourceTree = "<group>"; };
+		3B0E8D6E1CF764EF003F39C8 /* SVXShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXShopViewController.h; sourceTree = "<group>"; };
+		3B0E8D6F1CF764EF003F39C8 /* SVXShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXShopViewController.m; sourceTree = "<group>"; };
+		3B0E8D771CF7654C003F39C8 /* SVXUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXUserViewController.h; sourceTree = "<group>"; };
+		3B0E8D781CF7654C003F39C8 /* SVXUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXUserViewController.m; sourceTree = "<group>"; };
+		3B0E8D7A1CF76595003F39C8 /* SVXNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXNavigationViewController.h; sourceTree = "<group>"; };
+		3B0E8D7B1CF76595003F39C8 /* SVXNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXNavigationViewController.m; sourceTree = "<group>"; };
+		663F2AA11CF60E0600F23D40 /* SeasonalVegetables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeasonalVegetables.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		663F2AA51CF60E0600F23D40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		663F2AAE1CF60E0600F23D40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		663F2AB01CF60E0600F23D40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		663F2AB31CF60E0600F23D40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		663F2AB51CF60E0600F23D40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		663F2ABA1CF60E0600F23D40 /* SeasonalVegetablesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeasonalVegetablesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		663F2ABE1CF60E0600F23D40 /* SeasonalVegetablesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeasonalVegetablesTests.m; sourceTree = "<group>"; };
+		663F2AC01CF60E0600F23D40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		663F2AC51CF60E0600F23D40 /* SeasonalVegetablesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeasonalVegetablesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		663F2AC91CF60E0600F23D40 /* SeasonalVegetablesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeasonalVegetablesUITests.m; sourceTree = "<group>"; };
+		663F2ACB1CF60E0600F23D40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		666099B21CF74B90001FAB4E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		666099B31CF74B90001FAB4E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		666099B41CF74B90001FAB4E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		666099B51CF74B90001FAB4E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8D2354520446ADE43C8A6E57 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9178C01D0ACF3D77E1AF3EAC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9F0C6063C5F514D5530417DE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2E2A9AE1CF97464009DE9F6 /* SVXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXLoginViewController.h; sourceTree = "<group>"; };
+		B2E2A9AF1CF97464009DE9F6 /* SVXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXLoginViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		663F2A9E1CF60E0600F23D40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9401D86D3A87C4C74600E499 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		663F2AB71CF60E0600F23D40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		663F2AC21CF60E0600F23D40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B0E8D571CF76199003F39C8 /* SVXTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				3B0E8D591CF761D7003F39C8 /* SVXTabBarViewController.h */,
+				3B0E8D581CF761D7003F39C8 /* SVXTabBarViewController.m */,
+			);
+			path = SVXTabBar;
+			sourceTree = "<group>";
+		};
+		3B0E8D5B1CF7623D003F39C8 /* SVXNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				3B0E8D7A1CF76595003F39C8 /* SVXNavigationViewController.h */,
+				3B0E8D7B1CF76595003F39C8 /* SVXNavigationViewController.m */,
+			);
+			path = SVXNavigation;
+			sourceTree = "<group>";
+		};
+		3B0E8D651CF7643F003F39C8 /* SVXItems */ = {
+			isa = PBXGroup;
+			children = (
+				B2E2A9AD1CF9744C009DE9F6 /* Login */,
+				B2E2A9AC1CF97419009DE9F6 /* Search */,
+				3B0E8D661CF7643F003F39C8 /* Home */,
+				3B0E8D681CF7643F003F39C8 /* Shop */,
+				3B0E8D691CF7643F003F39C8 /* User */,
+			);
+			name = SVXItems;
+			path = SVXMain/SVXItems;
+			sourceTree = "<group>";
+		};
+		3B0E8D661CF7643F003F39C8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3B0E8D6B1CF7649F003F39C8 /* SVXHomeViewController.h */,
+				3B0E8D6C1CF7649F003F39C8 /* SVXHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3B0E8D681CF7643F003F39C8 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				3B0E8D6E1CF764EF003F39C8 /* SVXShopViewController.h */,
+				3B0E8D6F1CF764EF003F39C8 /* SVXShopViewController.m */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		3B0E8D691CF7643F003F39C8 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				3B0E8D771CF7654C003F39C8 /* SVXUserViewController.h */,
+				3B0E8D781CF7654C003F39C8 /* SVXUserViewController.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		3B0E8D6A1CF7647B003F39C8 /* SVXCategoties */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SVXCategoties;
+			sourceTree = "<group>";
+		};
+		628E79B18F192807BBB0C07E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D2354520446ADE43C8A6E57 /* Pods.debug.xcconfig */,
+				9178C01D0ACF3D77E1AF3EAC /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		663F2A981CF60E0600F23D40 = {
+			isa = PBXGroup;
+			children = (
+				663F2AA31CF60E0600F23D40 /* SeasonalVegetables */,
+				663F2ABD1CF60E0600F23D40 /* SeasonalVegetablesTests */,
+				663F2AC81CF60E0600F23D40 /* SeasonalVegetablesUITests */,
+				663F2AA21CF60E0600F23D40 /* Products */,
+				628E79B18F192807BBB0C07E /* Pods */,
+				D57D2BC60B01B2CEC8BC8B01 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		663F2AA21CF60E0600F23D40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				663F2AA11CF60E0600F23D40 /* SeasonalVegetables.app */,
+				663F2ABA1CF60E0600F23D40 /* SeasonalVegetablesTests.xctest */,
+				663F2AC51CF60E0600F23D40 /* SeasonalVegetablesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		663F2AA31CF60E0600F23D40 /* SeasonalVegetables */ = {
+			isa = PBXGroup;
+			children = (
+				666099AC1CF74A2B001FAB4E /* SVXClasses */,
+				663F2AA41CF60E0600F23D40 /* Supporting Files */,
+			);
+			path = SeasonalVegetables;
+			sourceTree = "<group>";
+		};
+		663F2AA41CF60E0600F23D40 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				663F2AAD1CF60E0600F23D40 /* Main.storyboard */,
+				663F2AB01CF60E0600F23D40 /* Assets.xcassets */,
+				663F2AB21CF60E0600F23D40 /* LaunchScreen.storyboard */,
+				663F2AB51CF60E0600F23D40 /* Info.plist */,
+				663F2AA51CF60E0600F23D40 /* main.m */,
+				3B0E8D561CF7605F003F39C8 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		663F2ABD1CF60E0600F23D40 /* SeasonalVegetablesTests */ = {
+			isa = PBXGroup;
+			children = (
+				663F2ABE1CF60E0600F23D40 /* SeasonalVegetablesTests.m */,
+				663F2AC01CF60E0600F23D40 /* Info.plist */,
+			);
+			path = SeasonalVegetablesTests;
+			sourceTree = "<group>";
+		};
+		663F2AC81CF60E0600F23D40 /* SeasonalVegetablesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				663F2AC91CF60E0600F23D40 /* SeasonalVegetablesUITests.m */,
+				663F2ACB1CF60E0600F23D40 /* Info.plist */,
+			);
+			path = SeasonalVegetablesUITests;
+			sourceTree = "<group>";
+		};
+		666099AC1CF74A2B001FAB4E /* SVXClasses */ = {
+			isa = PBXGroup;
+			children = (
+				3B0E8D651CF7643F003F39C8 /* SVXItems */,
+				666099B11CF74B71001FAB4E /* SVXMain */,
+				3B0E8D6A1CF7647B003F39C8 /* SVXCategoties */,
+			);
+			path = SVXClasses;
+			sourceTree = "<group>";
+		};
+		666099B11CF74B71001FAB4E /* SVXMain */ = {
+			isa = PBXGroup;
+			children = (
+				666099B21CF74B90001FAB4E /* AppDelegate.h */,
+				666099B31CF74B90001FAB4E /* AppDelegate.m */,
+				666099B41CF74B90001FAB4E /* ViewController.h */,
+				666099B51CF74B90001FAB4E /* ViewController.m */,
+				3B0E8D5B1CF7623D003F39C8 /* SVXNavigation */,
+				3B0E8D571CF76199003F39C8 /* SVXTabBar */,
+			);
+			path = SVXMain;
+			sourceTree = "<group>";
+		};
+		B2E2A9AC1CF97419009DE9F6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		B2E2A9AD1CF9744C009DE9F6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B2E2A9AE1CF97464009DE9F6 /* SVXLoginViewController.h */,
+				B2E2A9AF1CF97464009DE9F6 /* SVXLoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D57D2BC60B01B2CEC8BC8B01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F0C6063C5F514D5530417DE /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		663F2AA01CF60E0600F23D40 /* SeasonalVegetables */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 663F2ACE1CF60E0600F23D40 /* Build configuration list for PBXNativeTarget "SeasonalVegetables" */;
+			buildPhases = (
+				EFD29CD77981DE8EA8347B88 /* Check Pods Manifest.lock */,
+				663F2A9D1CF60E0600F23D40 /* Sources */,
+				663F2A9E1CF60E0600F23D40 /* Frameworks */,
+				663F2A9F1CF60E0600F23D40 /* Resources */,
+				79D25564E70A9E480F081419 /* Embed Pods Frameworks */,
+				70C2B2C5D1FFE3577AB0FAED /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SeasonalVegetables;
+			productName = SeasonalVegetables;
+			productReference = 663F2AA11CF60E0600F23D40 /* SeasonalVegetables.app */;
+			productType = "com.apple.product-type.application";
+		};
+		663F2AB91CF60E0600F23D40 /* SeasonalVegetablesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 663F2AD11CF60E0600F23D40 /* Build configuration list for PBXNativeTarget "SeasonalVegetablesTests" */;
+			buildPhases = (
+				663F2AB61CF60E0600F23D40 /* Sources */,
+				663F2AB71CF60E0600F23D40 /* Frameworks */,
+				663F2AB81CF60E0600F23D40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				663F2ABC1CF60E0600F23D40 /* PBXTargetDependency */,
+			);
+			name = SeasonalVegetablesTests;
+			productName = SeasonalVegetablesTests;
+			productReference = 663F2ABA1CF60E0600F23D40 /* SeasonalVegetablesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		663F2AC41CF60E0600F23D40 /* SeasonalVegetablesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 663F2AD41CF60E0600F23D40 /* Build configuration list for PBXNativeTarget "SeasonalVegetablesUITests" */;
+			buildPhases = (
+				663F2AC11CF60E0600F23D40 /* Sources */,
+				663F2AC21CF60E0600F23D40 /* Frameworks */,
+				663F2AC31CF60E0600F23D40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				663F2AC71CF60E0600F23D40 /* PBXTargetDependency */,
+			);
+			name = SeasonalVegetablesUITests;
+			productName = SeasonalVegetablesUITests;
+			productReference = 663F2AC51CF60E0600F23D40 /* SeasonalVegetablesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		663F2A991CF60E0600F23D40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = com.SeasonalVegetables;
+				TargetAttributes = {
+					663F2AA01CF60E0600F23D40 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = UHCLK74DHB;
+					};
+					663F2AB91CF60E0600F23D40 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 663F2AA01CF60E0600F23D40;
+					};
+					663F2AC41CF60E0600F23D40 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 663F2AA01CF60E0600F23D40;
+					};
+				};
+			};
+			buildConfigurationList = 663F2A9C1CF60E0600F23D40 /* Build configuration list for PBXProject "SeasonalVegetables" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 663F2A981CF60E0600F23D40;
+			productRefGroup = 663F2AA21CF60E0600F23D40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				663F2AA01CF60E0600F23D40 /* SeasonalVegetables */,
+				663F2AB91CF60E0600F23D40 /* SeasonalVegetablesTests */,
+				663F2AC41CF60E0600F23D40 /* SeasonalVegetablesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		663F2A9F1CF60E0600F23D40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				663F2AB41CF60E0600F23D40 /* LaunchScreen.storyboard in Resources */,
+				663F2AB11CF60E0600F23D40 /* Assets.xcassets in Resources */,
+				663F2AAF1CF60E0600F23D40 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		663F2AB81CF60E0600F23D40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		663F2AC31CF60E0600F23D40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		70C2B2C5D1FFE3577AB0FAED /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79D25564E70A9E480F081419 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFD29CD77981DE8EA8347B88 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		663F2A9D1CF60E0600F23D40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B0E8D7C1CF76595003F39C8 /* SVXNavigationViewController.m in Sources */,
+				3B0E8D5A1CF761D7003F39C8 /* SVXTabBarViewController.m in Sources */,
+				3B0E8D791CF7654C003F39C8 /* SVXUserViewController.m in Sources */,
+				3B0E8D6D1CF7649F003F39C8 /* SVXHomeViewController.m in Sources */,
+				666099B61CF74B90001FAB4E /* AppDelegate.m in Sources */,
+				3B0E8D701CF764EF003F39C8 /* SVXShopViewController.m in Sources */,
+				663F2AA61CF60E0600F23D40 /* main.m in Sources */,
+				B2E2A9B01CF97464009DE9F6 /* SVXLoginViewController.m in Sources */,
+				666099B71CF74B90001FAB4E /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		663F2AB61CF60E0600F23D40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				663F2ABF1CF60E0600F23D40 /* SeasonalVegetablesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		663F2AC11CF60E0600F23D40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				663F2ACA1CF60E0600F23D40 /* SeasonalVegetablesUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		663F2ABC1CF60E0600F23D40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 663F2AA01CF60E0600F23D40 /* SeasonalVegetables */;
+			targetProxy = 663F2ABB1CF60E0600F23D40 /* PBXContainerItemProxy */;
+		};
+		663F2AC71CF60E0600F23D40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 663F2AA01CF60E0600F23D40 /* SeasonalVegetables */;
+			targetProxy = 663F2AC61CF60E0600F23D40 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		663F2AAD1CF60E0600F23D40 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				663F2AAE1CF60E0600F23D40 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		663F2AB21CF60E0600F23D40 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				663F2AB31CF60E0600F23D40 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		663F2ACC1CF60E0600F23D40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SeasonalVegetables/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		663F2ACD1CF60E0600F23D40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SeasonalVegetables/PrefixHeader.pch;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		663F2ACF1CF60E0600F23D40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D2354520446ADE43C8A6E57 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = SeasonalVegetables/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tang.SeasonalVegetables;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		663F2AD01CF60E0600F23D40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9178C01D0ACF3D77E1AF3EAC /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = SeasonalVegetables/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tang.SeasonalVegetables;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		663F2AD21CF60E0600F23D40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SeasonalVegetablesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tang.SeasonalVegetablesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeasonalVegetables.app/SeasonalVegetables";
+			};
+			name = Debug;
+		};
+		663F2AD31CF60E0600F23D40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SeasonalVegetablesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tang.SeasonalVegetablesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeasonalVegetables.app/SeasonalVegetables";
+			};
+			name = Release;
+		};
+		663F2AD51CF60E0600F23D40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SeasonalVegetablesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tang.SeasonalVegetablesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SeasonalVegetables;
+			};
+			name = Debug;
+		};
+		663F2AD61CF60E0600F23D40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SeasonalVegetablesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tang.SeasonalVegetablesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SeasonalVegetables;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		663F2A9C1CF60E0600F23D40 /* Build configuration list for PBXProject "SeasonalVegetables" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				663F2ACC1CF60E0600F23D40 /* Debug */,
+				663F2ACD1CF60E0600F23D40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		663F2ACE1CF60E0600F23D40 /* Build configuration list for PBXNativeTarget "SeasonalVegetables" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				663F2ACF1CF60E0600F23D40 /* Debug */,
+				663F2AD01CF60E0600F23D40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		663F2AD11CF60E0600F23D40 /* Build configuration list for PBXNativeTarget "SeasonalVegetablesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				663F2AD21CF60E0600F23D40 /* Debug */,
+				663F2AD31CF60E0600F23D40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		663F2AD41CF60E0600F23D40 /* Build configuration list for PBXNativeTarget "SeasonalVegetablesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				663F2AD51CF60E0600F23D40 /* Debug */,
+				663F2AD61CF60E0600F23D40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 663F2A991CF60E0600F23D40 /* Project object */;
+}
