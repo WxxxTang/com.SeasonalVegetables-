@@ -66,6 +66,8 @@ static int const kLineWidth = 50;
     [self p_setupChildViewController];
     [self p_setupTitle];
     
+    NSLog(@"hello");
+    
     self.containScroller.contentSize = CGSizeMake(self.childViewControllers.count * SVXWidth, 0);
     
 }
