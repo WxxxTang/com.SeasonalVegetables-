@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3B0E8D5A1CF761D7003F39C8 /* SVXTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E8D581CF761D7003F39C8 /* SVXTabBarViewController.m */; };
-		3B0E8D701CF764EF003F39C8 /* SVXShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E8D6F1CF764EF003F39C8 /* SVXShopViewController.m */; };
 		3B0E8D791CF7654C003F39C8 /* SVXUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E8D781CF7654C003F39C8 /* SVXUserViewController.m */; };
 		3B0E8D7C1CF76595003F39C8 /* SVXNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E8D7B1CF76595003F39C8 /* SVXNavigationViewController.m */; };
 		662CA4E11CFB36D60087D788 /* SVXHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662CA4E01CFB36D60087D788 /* SVXHomeViewController.m */; };
@@ -27,6 +26,9 @@
 		663F2ACA1CF60E0600F23D40 /* SeasonalVegetablesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 663F2AC91CF60E0600F23D40 /* SeasonalVegetablesUITests.m */; };
 		666099B61CF74B90001FAB4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 666099B31CF74B90001FAB4E /* AppDelegate.m */; };
 		666099B71CF74B90001FAB4E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 666099B51CF74B90001FAB4E /* ViewController.m */; };
+		66AEE9E91CFC6C1300AF02D3 /* SVXShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AEE9E81CFC6C1300AF02D3 /* SVXShopViewController.m */; };
+		66AEE9EC1CFC6C4200AF02D3 /* SVXOddsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AEE9EB1CFC6C4200AF02D3 /* SVXOddsViewController.m */; };
+		66AEE9EF1CFC6C4D00AF02D3 /* SVXShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AEE9EE1CFC6C4D00AF02D3 /* SVXShopListViewController.m */; };
 		9401D86D3A87C4C74600E499 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0C6063C5F514D5530417DE /* libPods.a */; };
 		B2E2A9B01CF97464009DE9F6 /* SVXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E2A9AF1CF97464009DE9F6 /* SVXLoginViewController.m */; };
 /* End PBXBuildFile section */
@@ -52,8 +54,6 @@
 		3B0E8D561CF7605F003F39C8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3B0E8D581CF761D7003F39C8 /* SVXTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXTabBarViewController.m; sourceTree = "<group>"; };
 		3B0E8D591CF761D7003F39C8 /* SVXTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXTabBarViewController.h; sourceTree = "<group>"; };
-		3B0E8D6E1CF764EF003F39C8 /* SVXShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXShopViewController.h; sourceTree = "<group>"; };
-		3B0E8D6F1CF764EF003F39C8 /* SVXShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXShopViewController.m; sourceTree = "<group>"; };
 		3B0E8D771CF7654C003F39C8 /* SVXUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXUserViewController.h; sourceTree = "<group>"; };
 		3B0E8D781CF7654C003F39C8 /* SVXUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXUserViewController.m; sourceTree = "<group>"; };
 		3B0E8D7A1CF76595003F39C8 /* SVXNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXNavigationViewController.h; sourceTree = "<group>"; };
@@ -88,6 +88,12 @@
 		666099B31CF74B90001FAB4E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		666099B41CF74B90001FAB4E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		666099B51CF74B90001FAB4E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		66AEE9E71CFC6C1300AF02D3 /* SVXShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXShopViewController.h; sourceTree = "<group>"; };
+		66AEE9E81CFC6C1300AF02D3 /* SVXShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXShopViewController.m; sourceTree = "<group>"; };
+		66AEE9EA1CFC6C4200AF02D3 /* SVXOddsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXOddsViewController.h; sourceTree = "<group>"; };
+		66AEE9EB1CFC6C4200AF02D3 /* SVXOddsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXOddsViewController.m; sourceTree = "<group>"; };
+		66AEE9ED1CFC6C4D00AF02D3 /* SVXShopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXShopListViewController.h; sourceTree = "<group>"; };
+		66AEE9EE1CFC6C4D00AF02D3 /* SVXShopListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXShopListViewController.m; sourceTree = "<group>"; };
 		8D2354520446ADE43C8A6E57 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9178C01D0ACF3D77E1AF3EAC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9F0C6063C5F514D5530417DE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,8 +171,9 @@
 		3B0E8D681CF7643F003F39C8 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
-				3B0E8D6E1CF764EF003F39C8 /* SVXShopViewController.h */,
-				3B0E8D6F1CF764EF003F39C8 /* SVXShopViewController.m */,
+				66AEE9E61CFC6C0A00AF02D3 /* SVXShopModel */,
+				66AEE9E51CFC6C0200AF02D3 /* SVXShopView */,
+				66AEE9E31CFC6BDF00AF02D3 /* SVXShopController */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -337,6 +344,33 @@
 				3B0E8D571CF76199003F39C8 /* SVXTabBar */,
 			);
 			path = SVXMain;
+			sourceTree = "<group>";
+		};
+		66AEE9E31CFC6BDF00AF02D3 /* SVXShopController */ = {
+			isa = PBXGroup;
+			children = (
+				66AEE9E71CFC6C1300AF02D3 /* SVXShopViewController.h */,
+				66AEE9E81CFC6C1300AF02D3 /* SVXShopViewController.m */,
+				66AEE9EA1CFC6C4200AF02D3 /* SVXOddsViewController.h */,
+				66AEE9EB1CFC6C4200AF02D3 /* SVXOddsViewController.m */,
+				66AEE9ED1CFC6C4D00AF02D3 /* SVXShopListViewController.h */,
+				66AEE9EE1CFC6C4D00AF02D3 /* SVXShopListViewController.m */,
+			);
+			path = SVXShopController;
+			sourceTree = "<group>";
+		};
+		66AEE9E51CFC6C0200AF02D3 /* SVXShopView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SVXShopView;
+			sourceTree = "<group>";
+		};
+		66AEE9E61CFC6C0A00AF02D3 /* SVXShopModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SVXShopModel;
 			sourceTree = "<group>";
 		};
 		B2E2A9AD1CF9744C009DE9F6 /* Login */ = {
@@ -540,17 +574,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66AEE9EC1CFC6C4200AF02D3 /* SVXOddsViewController.m in Sources */,
 				3B0E8D7C1CF76595003F39C8 /* SVXNavigationViewController.m in Sources */,
 				662CA4E11CFB36D60087D788 /* SVXHomeViewController.m in Sources */,
 				662CA4ED1CFB3B950087D788 /* SVXDetailTableViewCell.m in Sources */,
+				66AEE9E91CFC6C1300AF02D3 /* SVXShopViewController.m in Sources */,
 				662CA5001CFC33FE0087D788 /* SVXHotSearchTableViewCell.m in Sources */,
 				3B0E8D5A1CF761D7003F39C8 /* SVXTabBarViewController.m in Sources */,
 				3B0E8D791CF7654C003F39C8 /* SVXUserViewController.m in Sources */,
 				666099B61CF74B90001FAB4E /* AppDelegate.m in Sources */,
-				3B0E8D701CF764EF003F39C8 /* SVXShopViewController.m in Sources */,
 				662CA4E91CFB3A950087D788 /* SVXSearchViewController.m in Sources */,
 				663F2AA61CF60E0600F23D40 /* main.m in Sources */,
 				662CA4E41CFB377E0087D788 /* SVXDetailViewController.m in Sources */,
+				66AEE9EF1CFC6C4D00AF02D3 /* SVXShopListViewController.m in Sources */,
 				B2E2A9B01CF97464009DE9F6 /* SVXLoginViewController.m in Sources */,
 				666099B71CF74B90001FAB4E /* ViewController.m in Sources */,
 				662CA4F11CFC26D90087D788 /* SVXRecomViewController.m in Sources */,
