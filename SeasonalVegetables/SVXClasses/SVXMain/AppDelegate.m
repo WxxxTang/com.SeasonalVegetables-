@@ -18,11 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-//    SVXTabBarViewController * tab =[[SVXTabBarViewController alloc] init];
-//    self.window.rootViewController = tab;
+    SVXTabBarViewController * tab =[[SVXTabBarViewController alloc] init];
+    self.window.rootViewController = tab;
 
-    SVXLoginViewController *vc =[[SVXLoginViewController alloc] init];
-    self.window.rootViewController = vc;
+//    SVXLoginViewController *vc =[[SVXLoginViewController alloc] init];
+//    self.window.rootViewController = vc;
     return YES;
 }
 

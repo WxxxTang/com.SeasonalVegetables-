@@ -16,7 +16,6 @@
 
 static CGFloat const kSVXTitleH = 44;
 static CGFloat const kMaxScale = 1.3;
-static int const kNavBarH = 64;
 static int const kButtonWidth = 70;
 static int const kLineWidth = 50;
 
@@ -125,24 +124,36 @@ static int const kLineWidth = 50;
 
 #pragma mark - 设置头部标题栏
 - (void)p_setupTitleScroller {
-    self.titleScroller = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SVXWidth, kSVXTitleH)];
+    self.titleScroller = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
     self.titleScroller.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.titleScroller];
     
     [self.titleScroller addSubview:self.bottomLine];
+    
+    [self.titleScroller mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).offset(0);
+        make.right.equalTo(self.view.mas_right).offset(0);
+        make.height.offset(kSVXTitleH);
+    }];
 }
 
 #pragma mark - 设置内容
 - (void)p_setupContainScroller {
-    int y = kNavBarH + kSVXTitleH;
     
-    self.containScroller = [[UIScrollView alloc] initWithFrame:CGRectMake(0, kSVXTitleH, SVXWidth, SVXHeight - y)];
+    self.containScroller = [[UIScrollView alloc] init];
     self.containScroller.backgroundColor = [UIColor whiteColor];
     self.containScroller.delegate = self;
     self.containScroller.pagingEnabled = YES;
     self.containScroller.showsHorizontalScrollIndicator = NO;
     self.containScroller.bounces = NO;
     [self.view addSubview:self.containScroller];
+    
+    [self.containScroller mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).offset(0);
+        make.right.equalTo(self.view.mas_right).offset(0);
+        make.top.equalTo(self.view.mas_top).offset(kSVXTitleH);
+        make.bottom.equalTo(self.view.mas_bottom).offset(0);
+    }];
 }
 
 #pragma mark - 添加子控制器
@@ -294,6 +305,5 @@ static int const kLineWidth = 50;
     [self.navigationController pushViewController:searchVC animated:YES];
     return NO;
 }
-
 
 @end

@@ -73,7 +73,7 @@ static NSString * const kHotSearchCell = @"kHotSearchCell";
 
 #pragma mark - setupTableView
 - (void)p_setupTableView {
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 64)
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)
                                                   style:UITableViewStyleGrouped];
     self.tableView.backgroundColor = [UIColor colorWithRed:247 / 255.0 green:247 / 255.0 blue:247 / 255.0 alpha:1];
     self.tableView.delegate = self;
@@ -91,6 +91,14 @@ static NSString * const kHotSearchCell = @"kHotSearchCell";
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SVXHotSearchTableViewCell class]) bundle:nil]
          forCellReuseIdentifier:kHotSearchCell];
+    
+    //约束tableView
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).offset(0);
+        make.right.equalTo(self.view.mas_right).offset(0);
+        make.top.equalTo(self.view.mas_top).offset(0);
+        make.bottom.equalTo(self.view.mas_bottom).offset(0);
+    }];
     
     
 }
