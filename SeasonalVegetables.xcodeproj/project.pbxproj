@@ -8,10 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		3B0E8D5A1CF761D7003F39C8 /* SVXTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E8D581CF761D7003F39C8 /* SVXTabBarViewController.m */; };
-		3B0E8D6D1CF7649F003F39C8 /* SVXHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E8D6C1CF7649F003F39C8 /* SVXHomeViewController.m */; };
 		3B0E8D701CF764EF003F39C8 /* SVXShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E8D6F1CF764EF003F39C8 /* SVXShopViewController.m */; };
 		3B0E8D791CF7654C003F39C8 /* SVXUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E8D781CF7654C003F39C8 /* SVXUserViewController.m */; };
 		3B0E8D7C1CF76595003F39C8 /* SVXNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E8D7B1CF76595003F39C8 /* SVXNavigationViewController.m */; };
+		662CA4E11CFB36D60087D788 /* SVXHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662CA4E01CFB36D60087D788 /* SVXHomeViewController.m */; };
+		662CA4E41CFB377E0087D788 /* SVXDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662CA4E31CFB377E0087D788 /* SVXDetailViewController.m */; };
+		662CA4E91CFB3A950087D788 /* SVXSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662CA4E81CFB3A950087D788 /* SVXSearchViewController.m */; };
+		662CA4ED1CFB3B950087D788 /* SVXDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662CA4EB1CFB3B950087D788 /* SVXDetailTableViewCell.m */; };
+		662CA4EE1CFB3B950087D788 /* SVXDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662CA4EC1CFB3B950087D788 /* SVXDetailTableViewCell.xib */; };
+		662CA4F11CFC26D90087D788 /* SVXRecomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 662CA4F01CFC26D90087D788 /* SVXRecomViewController.m */; };
+		662CA5001CFC33FE0087D788 /* SVXHotSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 662CA4FE1CFC33FE0087D788 /* SVXHotSearchTableViewCell.m */; };
+		662CA5011CFC33FE0087D788 /* SVXHotSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662CA4FF1CFC33FE0087D788 /* SVXHotSearchTableViewCell.xib */; };
 		663F2AA61CF60E0600F23D40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 663F2AA51CF60E0600F23D40 /* main.m */; };
 		663F2AAF1CF60E0600F23D40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663F2AAD1CF60E0600F23D40 /* Main.storyboard */; };
 		663F2AB11CF60E0600F23D40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 663F2AB01CF60E0600F23D40 /* Assets.xcassets */; };
@@ -45,14 +52,26 @@
 		3B0E8D561CF7605F003F39C8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3B0E8D581CF761D7003F39C8 /* SVXTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXTabBarViewController.m; sourceTree = "<group>"; };
 		3B0E8D591CF761D7003F39C8 /* SVXTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXTabBarViewController.h; sourceTree = "<group>"; };
-		3B0E8D6B1CF7649F003F39C8 /* SVXHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXHomeViewController.h; sourceTree = "<group>"; };
-		3B0E8D6C1CF7649F003F39C8 /* SVXHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXHomeViewController.m; sourceTree = "<group>"; };
 		3B0E8D6E1CF764EF003F39C8 /* SVXShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXShopViewController.h; sourceTree = "<group>"; };
 		3B0E8D6F1CF764EF003F39C8 /* SVXShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXShopViewController.m; sourceTree = "<group>"; };
 		3B0E8D771CF7654C003F39C8 /* SVXUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXUserViewController.h; sourceTree = "<group>"; };
 		3B0E8D781CF7654C003F39C8 /* SVXUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXUserViewController.m; sourceTree = "<group>"; };
 		3B0E8D7A1CF76595003F39C8 /* SVXNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXNavigationViewController.h; sourceTree = "<group>"; };
 		3B0E8D7B1CF76595003F39C8 /* SVXNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXNavigationViewController.m; sourceTree = "<group>"; };
+		662CA4DF1CFB36D60087D788 /* SVXHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXHomeViewController.h; sourceTree = "<group>"; };
+		662CA4E01CFB36D60087D788 /* SVXHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXHomeViewController.m; sourceTree = "<group>"; };
+		662CA4E21CFB377E0087D788 /* SVXDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXDetailViewController.h; sourceTree = "<group>"; };
+		662CA4E31CFB377E0087D788 /* SVXDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXDetailViewController.m; sourceTree = "<group>"; };
+		662CA4E71CFB3A950087D788 /* SVXSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXSearchViewController.h; sourceTree = "<group>"; };
+		662CA4E81CFB3A950087D788 /* SVXSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXSearchViewController.m; sourceTree = "<group>"; };
+		662CA4EA1CFB3B950087D788 /* SVXDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXDetailTableViewCell.h; sourceTree = "<group>"; };
+		662CA4EB1CFB3B950087D788 /* SVXDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXDetailTableViewCell.m; sourceTree = "<group>"; };
+		662CA4EC1CFB3B950087D788 /* SVXDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVXDetailTableViewCell.xib; sourceTree = "<group>"; };
+		662CA4EF1CFC26D90087D788 /* SVXRecomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXRecomViewController.h; sourceTree = "<group>"; };
+		662CA4F01CFC26D90087D788 /* SVXRecomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXRecomViewController.m; sourceTree = "<group>"; };
+		662CA4FD1CFC33FE0087D788 /* SVXHotSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXHotSearchTableViewCell.h; sourceTree = "<group>"; };
+		662CA4FE1CFC33FE0087D788 /* SVXHotSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXHotSearchTableViewCell.m; sourceTree = "<group>"; };
+		662CA4FF1CFC33FE0087D788 /* SVXHotSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVXHotSearchTableViewCell.xib; sourceTree = "<group>"; };
 		663F2AA11CF60E0600F23D40 /* SeasonalVegetables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeasonalVegetables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		663F2AA51CF60E0600F23D40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		663F2AAE1CF60E0600F23D40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -124,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				B2E2A9AD1CF9744C009DE9F6 /* Login */,
-				B2E2A9AC1CF97419009DE9F6 /* Search */,
+				662CA4E51CFB38320087D788 /* Search */,
 				3B0E8D661CF7643F003F39C8 /* Home */,
 				3B0E8D681CF7643F003F39C8 /* Shop */,
 				3B0E8D691CF7643F003F39C8 /* User */,
@@ -136,8 +155,9 @@
 		3B0E8D661CF7643F003F39C8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3B0E8D6B1CF7649F003F39C8 /* SVXHomeViewController.h */,
-				3B0E8D6C1CF7649F003F39C8 /* SVXHomeViewController.m */,
+				662CA4DE1CFB36CE0087D788 /* SVXHomeController */,
+				662CA4DD1CFB36C10087D788 /* SVXHomeModel */,
+				662CA4DC1CFB36B50087D788 /* SVXHomeView */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -174,6 +194,64 @@
 				9178C01D0ACF3D77E1AF3EAC /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		662CA4DC1CFB36B50087D788 /* SVXHomeView */ = {
+			isa = PBXGroup;
+			children = (
+				662CA4EA1CFB3B950087D788 /* SVXDetailTableViewCell.h */,
+				662CA4EB1CFB3B950087D788 /* SVXDetailTableViewCell.m */,
+				662CA4EC1CFB3B950087D788 /* SVXDetailTableViewCell.xib */,
+			);
+			path = SVXHomeView;
+			sourceTree = "<group>";
+		};
+		662CA4DD1CFB36C10087D788 /* SVXHomeModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SVXHomeModel;
+			sourceTree = "<group>";
+		};
+		662CA4DE1CFB36CE0087D788 /* SVXHomeController */ = {
+			isa = PBXGroup;
+			children = (
+				662CA4DF1CFB36D60087D788 /* SVXHomeViewController.h */,
+				662CA4E01CFB36D60087D788 /* SVXHomeViewController.m */,
+				662CA4E21CFB377E0087D788 /* SVXDetailViewController.h */,
+				662CA4E31CFB377E0087D788 /* SVXDetailViewController.m */,
+				662CA4EF1CFC26D90087D788 /* SVXRecomViewController.h */,
+				662CA4F01CFC26D90087D788 /* SVXRecomViewController.m */,
+			);
+			path = SVXHomeController;
+			sourceTree = "<group>";
+		};
+		662CA4E51CFB38320087D788 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				662CA4F21CFC30870087D788 /* SVXSearchView */,
+				662CA4E61CFB3A6F0087D788 /* SVXSearchController */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		662CA4E61CFB3A6F0087D788 /* SVXSearchController */ = {
+			isa = PBXGroup;
+			children = (
+				662CA4E71CFB3A950087D788 /* SVXSearchViewController.h */,
+				662CA4E81CFB3A950087D788 /* SVXSearchViewController.m */,
+			);
+			path = SVXSearchController;
+			sourceTree = "<group>";
+		};
+		662CA4F21CFC30870087D788 /* SVXSearchView */ = {
+			isa = PBXGroup;
+			children = (
+				662CA4FD1CFC33FE0087D788 /* SVXHotSearchTableViewCell.h */,
+				662CA4FE1CFC33FE0087D788 /* SVXHotSearchTableViewCell.m */,
+				662CA4FF1CFC33FE0087D788 /* SVXHotSearchTableViewCell.xib */,
+			);
+			path = SVXSearchView;
 			sourceTree = "<group>";
 		};
 		663F2A981CF60E0600F23D40 = {
@@ -259,13 +337,6 @@
 				3B0E8D571CF76199003F39C8 /* SVXTabBar */,
 			);
 			path = SVXMain;
-			sourceTree = "<group>";
-		};
-		B2E2A9AC1CF97419009DE9F6 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Search;
 			sourceTree = "<group>";
 		};
 		B2E2A9AD1CF9744C009DE9F6 /* Login */ = {
@@ -393,7 +464,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				663F2AB41CF60E0600F23D40 /* LaunchScreen.storyboard in Resources */,
+				662CA5011CFC33FE0087D788 /* SVXHotSearchTableViewCell.xib in Resources */,
 				663F2AB11CF60E0600F23D40 /* Assets.xcassets in Resources */,
+				662CA4EE1CFB3B950087D788 /* SVXDetailTableViewCell.xib in Resources */,
 				663F2AAF1CF60E0600F23D40 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,14 +541,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B0E8D7C1CF76595003F39C8 /* SVXNavigationViewController.m in Sources */,
+				662CA4E11CFB36D60087D788 /* SVXHomeViewController.m in Sources */,
+				662CA4ED1CFB3B950087D788 /* SVXDetailTableViewCell.m in Sources */,
+				662CA5001CFC33FE0087D788 /* SVXHotSearchTableViewCell.m in Sources */,
 				3B0E8D5A1CF761D7003F39C8 /* SVXTabBarViewController.m in Sources */,
 				3B0E8D791CF7654C003F39C8 /* SVXUserViewController.m in Sources */,
-				3B0E8D6D1CF7649F003F39C8 /* SVXHomeViewController.m in Sources */,
 				666099B61CF74B90001FAB4E /* AppDelegate.m in Sources */,
 				3B0E8D701CF764EF003F39C8 /* SVXShopViewController.m in Sources */,
+				662CA4E91CFB3A950087D788 /* SVXSearchViewController.m in Sources */,
 				663F2AA61CF60E0600F23D40 /* main.m in Sources */,
+				662CA4E41CFB377E0087D788 /* SVXDetailViewController.m in Sources */,
 				B2E2A9B01CF97464009DE9F6 /* SVXLoginViewController.m in Sources */,
 				666099B71CF74B90001FAB4E /* ViewController.m in Sources */,
+				662CA4F11CFC26D90087D788 /* SVXRecomViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
