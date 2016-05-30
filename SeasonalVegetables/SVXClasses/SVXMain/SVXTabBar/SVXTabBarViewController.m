@@ -44,9 +44,18 @@
     
     //    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:255/255.0
     //                                                               green:192/255.0 blue:203/255.0 alpha:0.5]];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
+//    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:249/255.0
                                                                   green:242/255.0 blue:222/255.0 alpha:1]];
+    //关闭高斯模糊
+    [UINavigationBar appearance].translucent = NO;
+    //去除导航栏上返回按钮的文字
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTintColor:[UIColor lightGrayColor]];
+    
+    NSDictionary *dic = @{NSForegroundColorAttributeName : [UIColor grayColor],
+                          NSFontAttributeName : [UIFont fontWithName:@"PingFang SC" size:17.f]};
+    [[UINavigationBar appearance] setTitleTextAttributes:dic];
     
     
 //    [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:202/255.0
