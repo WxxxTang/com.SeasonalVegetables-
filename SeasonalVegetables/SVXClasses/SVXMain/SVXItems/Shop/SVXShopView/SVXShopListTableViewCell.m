@@ -79,7 +79,7 @@
     [self.view1 addSubview:self.firstNameLabel];
     
     [self.firstNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view1.mas_left).offset(13);
+        make.left.equalTo(self.view1.mas_left).offset(8);
         make.top.equalTo(self.firstImage.mas_bottom).offset(-10);
         make.bottom.equalTo(self.view1.mas_bottom).offset(10);
         make.width.equalTo(self.view1.mas_width).multipliedBy(0.45);
@@ -88,14 +88,14 @@
     self.firstPriceLabel = [[UILabel alloc] init];
     self.firstPriceLabel.font = [UIFont fontWithName:@"PingFang SC" size:12.f];
     self.firstPriceLabel.textColor = [UIColor colorWithRed:237 / 255.0 green:110 / 255.0 blue:110 / 255.0 alpha:1];
-    self.secondPriceLabel.textAlignment = NSTextAlignmentRight;
+    self.firstPriceLabel.textAlignment = NSTextAlignmentRight;
     [self.view1 addSubview:self.firstPriceLabel];
     
     [self.firstPriceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.view1.mas_right).offset(0);
+        make.right.equalTo(self.view1.mas_right).offset(-8);
         make.top.equalTo(self.firstImage.mas_bottom).offset(-10);
         make.bottom.equalTo(self.view1.mas_bottom).offset(10);
-        make.width.equalTo(self.view1.mas_width).multipliedBy(0.3);
+        make.width.equalTo(self.view1.mas_width).multipliedBy(0.5);
     }];
 }
 
@@ -117,7 +117,7 @@
     [self.view2 addSubview:self.secondNameLabel];
     
     [self.secondNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view2.mas_left).offset(13);
+        make.left.equalTo(self.view2.mas_left).offset(8);
         make.top.equalTo(self.secondImage.mas_bottom).offset(-10);
         make.bottom.equalTo(self.view2.mas_bottom).offset(10);
         make.width.equalTo(self.view2.mas_width).multipliedBy(0.45);
@@ -130,10 +130,10 @@
     [self.view2 addSubview:self.secondPriceLabel];
     
     [self.secondPriceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.view2.mas_right).offset(0);
+        make.right.equalTo(self.view2.mas_right).offset(-8);
         make.top.equalTo(self.secondImage.mas_bottom).offset(-10);
         make.bottom.equalTo(self.view2.mas_bottom).offset(10);
-        make.width.equalTo(self.view2.mas_width).multipliedBy(0.3);
+        make.width.equalTo(self.view2.mas_width).multipliedBy(0.5);
     }];
 }
 
