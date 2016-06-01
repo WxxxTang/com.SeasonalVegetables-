@@ -19,8 +19,10 @@ static CGFloat const kMaxScale = 1.3;
 static int const kButtonWidth = 70;
 static int const kLineWidth = 50;
 
-@interface SVXHomeViewController () <UIScrollViewDelegate, UISearchBarDelegate>
-
+@interface SVXHomeViewController () <UIScrollViewDelegate, UISearchBarDelegate> {
+    UIView      *_preView;
+    NSUInteger  _currentX;
+}
 //定义头部标题
 @property (nonatomic, strong) UIScrollView  *titleScroller;
 @property (nonatomic, strong) UIScrollView  *containScroller;
@@ -64,9 +66,14 @@ static int const kLineWidth = 50;
     [self p_setupContainScroller];
     [self p_setupChildViewController];
     [self p_setupTitle];
+}
+
+- (void)viewWillLayoutSubviews {
+    //屏幕旋转修正containScroller的contentSize,修正到合适的大小
+    self.containScroller.contentSize = CGSizeMake(self.view.frame.size.width * self.childViewControllers.count, 0);
     
-    self.containScroller.contentSize = CGSizeMake(self.childViewControllers.count * SVXWidth, 0);
-    
+    //同样是修正位置，将当前的contentOffset修正到合适的位置
+    self.containScroller.contentOffset = CGPointMake(_currentX * self.view.frame.size.width, 0);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -97,11 +104,17 @@ static int const kLineWidth = 50;
 
 #pragma mark - 设置搜索栏
 - (void)p_setupSearchBar {
-    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 4, SVXWidth - 130, 21)];
+    UIView *searchView = nil;
+    if ([[UIDevice currentDevice].model isEqualToString:@"iPad"]) {
+        self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 4, 580, 21)];
+        searchView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 580, 30)];
+    } else if([[UIDevice currentDevice].model isEqualToString:@"iPhone"]) {
+        self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 4, self.view.frame.size.width - 130, 21)];
+        searchView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width - 130, 30)];
+    }
+    
     self.searchBar.delegate = self;
     self.searchBar.placeholder = @"搜你想搜";
-    [self.navigationController.navigationBar addSubview:self.searchBar];
-    UIView *searchView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SVXWidth - 130, 30)];
     searchView.backgroundColor = [UIColor whiteColor];
     searchView.layer.cornerRadius = 10;
     [searchView addSubview:self.searchBar];
@@ -124,7 +137,7 @@ static int const kLineWidth = 50;
 
 #pragma mark - 设置头部标题栏
 - (void)p_setupTitleScroller {
-    self.titleScroller = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    self.titleScroller = [[UIScrollView alloc] init];
     self.titleScroller.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.titleScroller];
     
@@ -151,8 +164,8 @@ static int const kLineWidth = 50;
     [self.containScroller mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view.mas_left).offset(0);
         make.right.equalTo(self.view.mas_right).offset(0);
-        make.top.equalTo(self.view.mas_top).offset(kSVXTitleH);
         make.bottom.equalTo(self.view.mas_bottom).offset(0);
+        make.top.equalTo(self.view.mas_top).offset(kSVXTitleH);
     }];
 }
 
@@ -173,6 +186,37 @@ static int const kLineWidth = 50;
     SVXDetailViewController *winterVC = [[SVXDetailViewController alloc] init];
     winterVC.title = @"冬";
     [self addChildViewController:winterVC];
+    
+    //添加4个占位View
+    UIView *tempView = nil;
+    for (int i = 0; i < self.childViewControllers.count; i++) {
+        UIView *view = [[UIView alloc] init];
+        view.backgroundColor = [UIColor whiteColor];
+        [self.containScroller addSubview:view];
+        
+        if (i == 0) {
+            [view mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.top.bottom.equalTo(self.containScroller);
+                make.width.equalTo(self.view.mas_width);
+                make.height.equalTo(self.containScroller.mas_height);
+            }];
+        } else if(i == 3){
+            [view mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(tempView.mas_right).offset(0);
+                make.top.right.bottom.equalTo(self.containScroller);
+                make.width.equalTo(self.view.mas_width);
+                make.height.equalTo(self.containScroller.mas_height);
+            }];
+        } else {
+            [view mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(tempView.mas_right).offset(0);
+                make.top.bottom.equalTo(self.containScroller);
+                make.width.equalTo(self.view.mas_width);
+                make.height.equalTo(self.containScroller.mas_height);
+            }];
+        }
+        tempView = view;
+    }
     
 }
 
@@ -216,8 +260,9 @@ static int const kLineWidth = 50;
     
     NSUInteger index = sender.tag;
     [self p_setupOneChildController:index];
+    _currentX = index;
     
-    self.containScroller.contentOffset = CGPointMake(index * SVXWidth, 0);
+    self.containScroller.contentOffset = CGPointMake(index * self.view.frame.size.width, 0);
 }
 
 #pragma mark - 选中按钮进行的操作
@@ -241,8 +286,8 @@ static int const kLineWidth = 50;
 
 #pragma mark - 将当前选中的按钮置于中心
 - (void)p_setupButtonCenter:(UIButton *)button {
-    CGFloat offSet = button.center.x - SVXWidth * 0.5;
-    CGFloat maxOffSet = self.titleScroller.contentSize.width - SVXWidth;
+    CGFloat offSet = button.center.x - self.view.frame.size.width * 0.5;
+    CGFloat maxOffSet = self.titleScroller.contentSize.width - self.view.frame.size.width;
     if (offSet > maxOffSet) {
         offSet = maxOffSet;
     }
@@ -256,7 +301,6 @@ static int const kLineWidth = 50;
 
 #pragma mark - 添加一个子视图方法
 - (void)p_setupOneChildController:(NSUInteger)index {
-    CGFloat x = index * SVXWidth;
     UIViewController *VC = self.childViewControllers[index];
     
     //判断是否已经加上
@@ -264,21 +308,43 @@ static int const kLineWidth = 50;
         return;
     }
     
-    VC.view.frame = CGRectMake(x, 0, SVXWidth, SVXHeight - self.containScroller.frame.origin.y);
-    
     [self.containScroller addSubview:VC.view];
+    
+    if (index == 0) {
+        [VC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.top.bottom.equalTo(self.containScroller);
+            make.width.equalTo(self.view.mas_width);
+            make.height.equalTo(self.containScroller.mas_height);
+        }];
+    } else if(index == 3){
+        [VC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(_preView.mas_right).offset(0);
+            make.top.right.bottom.equalTo(self.containScroller);
+            make.width.equalTo(self.view.mas_width);
+            make.height.equalTo(self.containScroller.mas_height);
+        }];
+    } else {
+        [VC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(_preView.mas_right).offset(0);
+            make.top.bottom.equalTo(self.containScroller);
+            make.width.equalTo(self.view.mas_width);
+            make.height.equalTo(self.containScroller.mas_height);
+        }];
+    }
+    _preView = VC.view;
 }
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    NSUInteger i = self.containScroller.contentOffset.x / SVXWidth;
+    NSUInteger i = self.containScroller.contentOffset.x / self.view.frame.size.width;
     [self p_selectButton:self.titleButtons[i]];
     [self p_setupOneChildController:i];
+    _currentX = i;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat offset = scrollView.contentOffset.x;
-    NSUInteger leftIndex = offset / SVXWidth;
+    NSUInteger leftIndex = offset / self.view.frame.size.width;
     NSUInteger rightIndex = leftIndex + 1;
     
     UIButton *leftButton = self.titleButtons[leftIndex];
@@ -288,7 +354,7 @@ static int const kLineWidth = 50;
     }
     
     CGFloat transScale = kMaxScale - 1;
-    CGFloat rightScale = offset / SVXWidth - leftIndex;
+    CGFloat rightScale = offset / self.view.frame.size.width - leftIndex;
     CGFloat leftScale = 1 - rightScale;
     
     leftButton.transform = CGAffineTransformMakeScale(leftScale * transScale + 1, leftScale * transScale + 1);

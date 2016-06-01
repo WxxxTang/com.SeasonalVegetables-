@@ -59,11 +59,17 @@ static NSString * const kHotSearchCell = @"kHotSearchCell";
 
 #pragma mark - 设置搜索栏
 - (void)p_setupSearchBar {
-    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 4, SVXWidth - 130, 21)];
+    UIView *searchView = nil;
+    if ([[UIDevice currentDevice].model isEqualToString:@"iPad"]) {
+        self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 4, 580, 21)];
+        searchView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 580, 30)];
+    } else if([[UIDevice currentDevice].model isEqualToString:@"iPhone"]) {
+        self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 4, self.view.frame.size.width - 130, 21)];
+        searchView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width - 130, 30)];
+    }
+    
     self.searchBar.delegate = self;
     self.searchBar.placeholder = @"搜你想搜";
-    [self.navigationController.navigationBar addSubview:self.searchBar];
-    UIView *searchView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SVXWidth - 130, 30)];
     searchView.backgroundColor = [UIColor whiteColor];
     searchView.layer.cornerRadius = 10;
     [searchView addSubview:self.searchBar];
