@@ -8,6 +8,7 @@
 
 #import "SVXShopListViewController.h"
 #import "SVXShopListTableViewCell.h"
+#import "SVXShopNextViewController.h"
 #import <MJRefresh/MJRefresh.h>
 
 static NSString * const kSVXShopListCell1 = @"kSVXShopListCell1";
@@ -132,6 +133,15 @@ static NSString * const kSVXShopListCell2 = @"kSVXShopListCell2";
     }
     
     return height;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        SVXShopNextViewController *svxShopNext = [[SVXShopNextViewController alloc] init];
+        svxShopNext.title = self.titleArray[indexPath.section];
+        svxShopNext.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:svxShopNext animated:YES];
+    }
 }
 
 #pragma mark - 下拉刷新事件

@@ -29,6 +29,9 @@
 		666A42CE1CFEBF5A0058C5AA /* SVXOddsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 666A42CC1CFEBF5A0058C5AA /* SVXOddsTableViewCell.m */; };
 		666A42CF1CFEBF5A0058C5AA /* SVXOddsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666A42CD1CFEBF5A0058C5AA /* SVXOddsTableViewCell.xib */; };
 		666A42D31CFED4590058C5AA /* SVXShopListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 666A42D11CFED4590058C5AA /* SVXShopListTableViewCell.m */; };
+		666A42D71CFF09B40058C5AA /* SVXShopNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 666A42D61CFF09B40058C5AA /* SVXShopNextViewController.m */; };
+		666A42DE1CFF0BFA0058C5AA /* SVXShopNextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 666A42DC1CFF0BFA0058C5AA /* SVXShopNextCollectionViewCell.m */; };
+		666A42DF1CFF0BFA0058C5AA /* SVXShopNextCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666A42DD1CFF0BFA0058C5AA /* SVXShopNextCollectionViewCell.xib */; };
 		66AEE9E91CFC6C1300AF02D3 /* SVXShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AEE9E81CFC6C1300AF02D3 /* SVXShopViewController.m */; };
 		66AEE9EC1CFC6C4200AF02D3 /* SVXOddsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AEE9EB1CFC6C4200AF02D3 /* SVXOddsViewController.m */; };
 		66AEE9EF1CFC6C4D00AF02D3 /* SVXShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AEE9EE1CFC6C4D00AF02D3 /* SVXShopListViewController.m */; };
@@ -96,6 +99,11 @@
 		666A42CD1CFEBF5A0058C5AA /* SVXOddsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVXOddsTableViewCell.xib; sourceTree = "<group>"; };
 		666A42D01CFED4590058C5AA /* SVXShopListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXShopListTableViewCell.h; sourceTree = "<group>"; };
 		666A42D11CFED4590058C5AA /* SVXShopListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXShopListTableViewCell.m; sourceTree = "<group>"; };
+		666A42D51CFF09B40058C5AA /* SVXShopNextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXShopNextViewController.h; sourceTree = "<group>"; };
+		666A42D61CFF09B40058C5AA /* SVXShopNextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXShopNextViewController.m; sourceTree = "<group>"; };
+		666A42DB1CFF0BFA0058C5AA /* SVXShopNextCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXShopNextCollectionViewCell.h; sourceTree = "<group>"; };
+		666A42DC1CFF0BFA0058C5AA /* SVXShopNextCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXShopNextCollectionViewCell.m; sourceTree = "<group>"; };
+		666A42DD1CFF0BFA0058C5AA /* SVXShopNextCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVXShopNextCollectionViewCell.xib; sourceTree = "<group>"; };
 		66AEE9E71CFC6C1300AF02D3 /* SVXShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXShopViewController.h; sourceTree = "<group>"; };
 		66AEE9E81CFC6C1300AF02D3 /* SVXShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXShopViewController.m; sourceTree = "<group>"; };
 		66AEE9EA1CFC6C4200AF02D3 /* SVXOddsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXOddsViewController.h; sourceTree = "<group>"; };
@@ -363,6 +371,8 @@
 				66AEE9EB1CFC6C4200AF02D3 /* SVXOddsViewController.m */,
 				66AEE9ED1CFC6C4D00AF02D3 /* SVXShopListViewController.h */,
 				66AEE9EE1CFC6C4D00AF02D3 /* SVXShopListViewController.m */,
+				666A42D51CFF09B40058C5AA /* SVXShopNextViewController.h */,
+				666A42D61CFF09B40058C5AA /* SVXShopNextViewController.m */,
 			);
 			path = SVXShopController;
 			sourceTree = "<group>";
@@ -375,6 +385,9 @@
 				666A42CD1CFEBF5A0058C5AA /* SVXOddsTableViewCell.xib */,
 				666A42D01CFED4590058C5AA /* SVXShopListTableViewCell.h */,
 				666A42D11CFED4590058C5AA /* SVXShopListTableViewCell.m */,
+				666A42DB1CFF0BFA0058C5AA /* SVXShopNextCollectionViewCell.h */,
+				666A42DC1CFF0BFA0058C5AA /* SVXShopNextCollectionViewCell.m */,
+				666A42DD1CFF0BFA0058C5AA /* SVXShopNextCollectionViewCell.xib */,
 			);
 			path = SVXShopView;
 			sourceTree = "<group>";
@@ -515,6 +528,7 @@
 				663F2AB11CF60E0600F23D40 /* Assets.xcassets in Resources */,
 				666A42CF1CFEBF5A0058C5AA /* SVXOddsTableViewCell.xib in Resources */,
 				662CA4EE1CFB3B950087D788 /* SVXDetailTableViewCell.xib in Resources */,
+				666A42DF1CFF0BFA0058C5AA /* SVXShopNextCollectionViewCell.xib in Resources */,
 				663F2AAF1CF60E0600F23D40 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,8 +602,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				666A42D71CFF09B40058C5AA /* SVXShopNextViewController.m in Sources */,
 				666A42CE1CFEBF5A0058C5AA /* SVXOddsTableViewCell.m in Sources */,
 				66AEE9EC1CFC6C4200AF02D3 /* SVXOddsViewController.m in Sources */,
+				666A42DE1CFF0BFA0058C5AA /* SVXShopNextCollectionViewCell.m in Sources */,
 				3B0E8D7C1CF76595003F39C8 /* SVXNavigationViewController.m in Sources */,
 				662CA4E11CFB36D60087D788 /* SVXHomeViewController.m in Sources */,
 				662CA4ED1CFB3B950087D788 /* SVXDetailTableViewCell.m in Sources */,
