@@ -37,6 +37,7 @@
 		666B57771D01E7B300D78605 /* SVXDetailHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 666B57761D01E7B300D78605 /* SVXDetailHeadView.m */; };
 		666CFA7B1D0271A9008AE70F /* SVXIntroductionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 666CFA791D0271A9008AE70F /* SVXIntroductionTableViewCell.m */; };
 		666CFA7C1D0271A9008AE70F /* SVXIntroductionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666CFA7A1D0271A9008AE70F /* SVXIntroductionTableViewCell.xib */; };
+		666CFA7F1D02C515008AE70F /* SVXDetailShopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 666CFA7E1D02C515008AE70F /* SVXDetailShopView.m */; };
 		66AEE9E91CFC6C1300AF02D3 /* SVXShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AEE9E81CFC6C1300AF02D3 /* SVXShopViewController.m */; };
 		66AEE9EC1CFC6C4200AF02D3 /* SVXOddsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AEE9EB1CFC6C4200AF02D3 /* SVXOddsViewController.m */; };
 		66AEE9EF1CFC6C4D00AF02D3 /* SVXShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AEE9EE1CFC6C4D00AF02D3 /* SVXShopListViewController.m */; };
@@ -118,6 +119,8 @@
 		666CFA781D0271A9008AE70F /* SVXIntroductionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXIntroductionTableViewCell.h; sourceTree = "<group>"; };
 		666CFA791D0271A9008AE70F /* SVXIntroductionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXIntroductionTableViewCell.m; sourceTree = "<group>"; };
 		666CFA7A1D0271A9008AE70F /* SVXIntroductionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVXIntroductionTableViewCell.xib; sourceTree = "<group>"; };
+		666CFA7D1D02C515008AE70F /* SVXDetailShopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXDetailShopView.h; sourceTree = "<group>"; };
+		666CFA7E1D02C515008AE70F /* SVXDetailShopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXDetailShopView.m; sourceTree = "<group>"; };
 		66AEE9E71CFC6C1300AF02D3 /* SVXShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXShopViewController.h; sourceTree = "<group>"; };
 		66AEE9E81CFC6C1300AF02D3 /* SVXShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXShopViewController.m; sourceTree = "<group>"; };
 		66AEE9EA1CFC6C4200AF02D3 /* SVXOddsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXOddsViewController.h; sourceTree = "<group>"; };
@@ -411,6 +414,8 @@
 				666A42DB1CFF0BFA0058C5AA /* SVXShopNextCollectionViewCell.h */,
 				666A42DC1CFF0BFA0058C5AA /* SVXShopNextCollectionViewCell.m */,
 				666A42DD1CFF0BFA0058C5AA /* SVXShopNextCollectionViewCell.xib */,
+				666CFA7D1D02C515008AE70F /* SVXDetailShopView.h */,
+				666CFA7E1D02C515008AE70F /* SVXDetailShopView.m */,
 			);
 			path = SVXShopView;
 			sourceTree = "<group>";
@@ -642,6 +647,7 @@
 				3B0E8D791CF7654C003F39C8 /* SVXUserViewController.m in Sources */,
 				666099B61CF74B90001FAB4E /* AppDelegate.m in Sources */,
 				666CFA7B1D0271A9008AE70F /* SVXIntroductionTableViewCell.m in Sources */,
+				666CFA7F1D02C515008AE70F /* SVXDetailShopView.m in Sources */,
 				662CA4E91CFB3A950087D788 /* SVXSearchViewController.m in Sources */,
 				663F2AA61CF60E0600F23D40 /* main.m in Sources */,
 				662CA4E41CFB377E0087D788 /* SVXDetailViewController.m in Sources */,
