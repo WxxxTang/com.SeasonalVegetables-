@@ -10,7 +10,7 @@
 
 @protocol SVXShopListDelegate <NSObject>
 
-- (void)buttonActionMethod:(NSUInteger)index;
+- (void)buttonActionMethod:(NSString *)string;
 
 @end
 

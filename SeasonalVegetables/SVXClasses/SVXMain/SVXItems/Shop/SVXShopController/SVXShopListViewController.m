@@ -9,6 +9,7 @@
 #import "SVXShopListViewController.h"
 #import "SVXShopListTableViewCell.h"
 #import "SVXShopNextViewController.h"
+#import "SVXDetailShopViewController.h"
 #import <MJRefresh/MJRefresh.h>
 
 static NSString * const kSVXShopListCell1 = @"kSVXShopListCell1";
@@ -146,7 +147,7 @@ static NSString * const kSVXShopListCell2 = @"kSVXShopListCell2";
 
 #pragma mark - 下拉刷新事件
 - (void)p_loadHeadData {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
         
         [self.tableView.mj_header endRefreshing];
@@ -154,8 +155,11 @@ static NSString * const kSVXShopListCell2 = @"kSVXShopListCell2";
 }
 
 #pragma mark - SVXShopListDelegate
-- (void)buttonActionMethod:(NSUInteger)index {
-    NSLog(@"%lu", (unsigned long)index);
+- (void)buttonActionMethod:(NSString *)string {
+    SVXDetailShopViewController *svxDetail = [[SVXDetailShopViewController alloc] init];
+    svxDetail.hidesBottomBarWhenPushed = YES;
+    svxDetail.title = string;
+    [self.navigationController pushViewController:svxDetail animated:YES];
 }
 
 @end

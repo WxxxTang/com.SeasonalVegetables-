@@ -8,6 +8,7 @@
 
 #import "SVXRecomViewController.h"
 #import "SVXDetailTableViewCell.h"
+#import "SVXIntroduceViewController.h"
 #import <MJRefresh/MJRefresh.h>
 
 static NSString * const kSVXRecomCell = @"kSVXRecomCell";
@@ -92,6 +93,14 @@ static NSString * const kSVXRecomCell = @"kSVXRecomCell";
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    SVXIntroduceViewController *svxIntro = [[SVXIntroduceViewController alloc] init];
+    svxIntro.hidesBottomBarWhenPushed = YES;
+    svxIntro.title = @"莲藕";
+    [self.navigationController pushViewController:svxIntro animated:YES];
+}
+
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return self.titleArrays[section];
 }
@@ -106,7 +115,7 @@ static NSString * const kSVXRecomCell = @"kSVXRecomCell";
 
 #pragma mark - 下拉刷新事件
 - (void)p_loadHeadData {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
         
         [self.tableView.mj_header endRefreshing];
@@ -115,7 +124,7 @@ static NSString * const kSVXRecomCell = @"kSVXRecomCell";
 
 #pragma mark - 上拉加载事件
 - (void)p_loadFootData {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
         
         [self.tableView.mj_footer endRefreshing];

@@ -8,6 +8,7 @@
 
 #import "SVXOddsViewController.h"
 #import "SVXOddsTableViewCell.h"
+#import "SVXDetailShopViewController.h"
 #import <MJRefresh/MJRefresh.h>
 
 static NSString * const kSVXOddsCell = @"kSVXOddsCell";
@@ -42,7 +43,7 @@ static NSString * const kSVXOddsCell = @"kSVXOddsCell";
     if ([[UIDevice currentDevice].model isEqualToString:@"iPad"]) {
         self.tableView.rowHeight = 400;
     } else if([[UIDevice currentDevice].model isEqualToString:@"iPhone"]) {
-        self.tableView.rowHeight = 250;
+        self.tableView.rowHeight = 270;
     }
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -91,9 +92,16 @@ static NSString * const kSVXOddsCell = @"kSVXOddsCell";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    SVXDetailShopViewController *svxDetail = [[SVXDetailShopViewController alloc] init];
+    svxDetail.hidesBottomBarWhenPushed = YES;
+    svxDetail.title = @"秋葵";
+    [self.navigationController pushViewController:svxDetail animated:YES];
+}
+
 #pragma mark - 下拉刷新事件
 - (void)p_loadHeadData {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
         
         [self.tableView.mj_header endRefreshing];
@@ -102,7 +110,7 @@ static NSString * const kSVXOddsCell = @"kSVXOddsCell";
 
 #pragma mark - 上拉加载事件
 - (void)p_loadFootData {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
         
         [self.tableView.mj_footer endRefreshing];

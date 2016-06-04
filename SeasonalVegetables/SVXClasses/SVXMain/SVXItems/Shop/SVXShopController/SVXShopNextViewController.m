@@ -8,6 +8,7 @@
 
 #import "SVXShopNextViewController.h"
 #import "SVXShopNextCollectionViewCell.h"
+#import "SVXDetailShopViewController.h"
 #import <MJRefresh/MJRefresh.h>
 
 static NSString * const kSVXShopNextCell = @"kSVXShopNextCell";
@@ -110,7 +111,10 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section {
 
 #pragma mark - UICollectionViewDelegate
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"选择");
+    SVXDetailShopViewController *svxDetail = [[SVXDetailShopViewController alloc] init];
+    svxDetail.hidesBottomBarWhenPushed = YES;
+    svxDetail.title = @"秋葵";
+    [self.navigationController pushViewController:svxDetail animated:YES];
 }
 
 //返回这个UICollectionView是否可以被选择
@@ -120,7 +124,7 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section {
 
 #pragma mark - 下拉刷新事件
 - (void)p_loadHeadData {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.collectionView reloadData];
         
         [self.collectionView.mj_header endRefreshing];
@@ -129,7 +133,7 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section {
 
 #pragma mark - 上拉加载事件
 - (void)p_loadFootData {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.collectionView reloadData];
         
         [self.collectionView.mj_footer endRefreshing];

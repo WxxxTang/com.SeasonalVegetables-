@@ -162,11 +162,11 @@
 
 #pragma mark - buttonAction
 - (void)tapAction1:(UITapGestureRecognizer *)tap {
-    [self.shopDelegate buttonActionMethod:1];
+    [self.shopDelegate buttonActionMethod:self.firstNameLabel.text];
 }
 
 - (void)tapAction2:(UITapGestureRecognizer *)tap {
-    [self.shopDelegate buttonActionMethod:2];
+    [self.shopDelegate buttonActionMethod:self.secondNameLabel.text];
 }
 
 @end
