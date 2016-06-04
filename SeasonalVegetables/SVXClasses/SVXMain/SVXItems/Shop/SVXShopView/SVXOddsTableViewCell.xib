@@ -31,7 +31,7 @@
                             <constraint firstAttribute="width" constant="28" id="kIp-lg-Fz8"/>
                             <constraint firstAttribute="height" constant="21" id="oxb-qE-fzN"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="12"/>
+                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
                         <color key="textColor" red="0.94117647058823528" green="0.72710468786025595" blue="0.33155497017368146" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -41,16 +41,16 @@
                             <constraint firstAttribute="height" constant="21" id="7gL-km-Xzy"/>
                             <constraint firstAttribute="width" constant="160" id="v4l-ie-dOJ"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="12"/>
+                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
                         <color key="textColor" red="0.53725490196078429" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥20(斤)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64o-je-ggB">
-                        <rect key="frame" x="245" y="192" width="42" height="21"/>
+                        <rect key="frame" x="241.5" y="192" width="45.5" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="iUd-ww-rXe"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="12"/>
+                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
                         <color key="textColor" red="0.91764705882352937" green="0.41960784313725491" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
