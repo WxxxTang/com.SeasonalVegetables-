@@ -134,6 +134,7 @@ static NSString * const kHotSearchCell = @"kHotSearchCell";
     if (indexPath.section == 0) {
         cell = [tableView dequeueReusableCellWithIdentifier:kHotSearchCell];
         cell.hotDelegate = self;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     return cell;

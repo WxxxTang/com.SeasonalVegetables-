@@ -77,14 +77,14 @@
     [buyButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.bottom.equalTo(self);
         make.width.equalTo(self.mas_width).multipliedBy(0.25);
-        make.height.equalTo(54);
+        make.height.equalTo(44);
     }];
     
     [addButton makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(buyButton.mas_left).offset(0);
         make.bottom.equalTo(buyButton);
         make.width.equalTo(self.mas_width).multipliedBy(0.3);
-        make.height.equalTo(54);
+        make.height.equalTo(44);
     }];
     
     [priceLabel mas_makeConstraints:^(MASConstraintMaker *make) {

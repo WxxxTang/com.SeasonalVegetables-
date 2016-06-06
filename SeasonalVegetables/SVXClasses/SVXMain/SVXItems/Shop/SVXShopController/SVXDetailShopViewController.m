@@ -10,6 +10,7 @@
 #import "SVXIntroductionTableViewCell.h"
 #import "SVXDetailShopView.h"
 #import "SVXBuyView.h"
+#import "SVXOrderViewController.h"
 
 static NSString * const kDetailShopCell = @"kDetailShopCell";
 
@@ -19,6 +20,7 @@ static NSString * const kDetailShopCell = @"kDetailShopCell";
 @property (nonatomic, copy)   NSArray               *containArray;
 @property (nonatomic, strong) UITableView           *tableView;
 @property (nonatomic, strong) SVXDetailShopView     *svxHeadView;
+@property (nonatomic, copy)   NSString              *allPrice;
 
 @end
 
@@ -42,6 +44,7 @@ static NSString * const kDetailShopCell = @"kDetailShopCell";
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
+    self.allPrice = @"20";
     
     [self p_initWithNavigationBarItem];
     [self p_setupTableView];
@@ -56,13 +59,6 @@ static NSString * const kDetailShopCell = @"kDetailShopCell";
 }
 
 - (void)p_initWithNavigationBarItem {
-    UITapGestureRecognizer *shoucanTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                        action:@selector(shoucanTapAction:)];
-    UIImageView *leftView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 23, 22)];
-    leftView.image = [UIImage imageNamed:@"shoucan"];
-    leftView.userInteractionEnabled = YES;
-    [leftView addGestureRecognizer:shoucanTapGesture];
-    UIBarButtonItem *shoucanItem = [[UIBarButtonItem alloc] initWithCustomView:leftView];
     
     UIImageView *rightView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
     rightView.image = [UIImage imageNamed:@"share"];
@@ -72,7 +68,7 @@ static NSString * const kDetailShopCell = @"kDetailShopCell";
     [rightView addGestureRecognizer:shareTap];
     UIBarButtonItem *shareItem = [[UIBarButtonItem alloc] initWithCustomView:rightView];
     
-    self.navigationItem.rightBarButtonItems = @[shareItem, shoucanItem];
+    self.navigationItem.rightBarButtonItems = @[shareItem];
 }
 
 #pragma mark - 初始化ScrollView
@@ -96,7 +92,7 @@ static NSString * const kDetailShopCell = @"kDetailShopCell";
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.equalTo(self.view);
-        make.bottom.equalTo(self.view).offset(-100);
+        make.bottom.equalTo(self.view).offset(-90);
     }];
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SVXIntroductionTableViewCell class]) bundle:nil]
@@ -131,7 +127,7 @@ static NSString * const kDetailShopCell = @"kDetailShopCell";
     
     [buyView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.equalTo(self.view);
-        make.height.equalTo(100);
+        make.height.equalTo(90);
     }];
 }
 
@@ -154,11 +150,6 @@ static NSString * const kDetailShopCell = @"kDetailShopCell";
     return cell;
 }
 
-#pragma mark - 收藏按钮事件
-- (void)shoucanTapAction:(UITapGestureRecognizer *)tap {
-    NSLog(@"shoucan");
-}
-
 #pragma mark - 分享按钮事件
 - (void)shareAction:(UITapGestureRecognizer *)tap {
     NSLog(@"share");
@@ -170,8 +161,18 @@ static NSString * const kDetailShopCell = @"kDetailShopCell";
 }
 
 #pragma mark - SVXBuyDelegate
-- (void)buyAction:(NSString *)str {
-    NSLog(@"%@", str);
+- (void)buyAction:(NSString *)str {    
+    if ([str isEqualToString:@"购买"]) {
+        SVXOrderViewController *order = [[SVXOrderViewController alloc] init];
+        order.title = @"确认订单";
+        order.onePrice = @"20";
+        order.number = [self.allPrice integerValue] / 20;
+        [self.navigationController pushViewController:order animated:YES];
+    } else if ([str isEqualToString:@"加入购物车"]) {
+    
+    } else {
+        self.allPrice = str;
+    }
 }
 
 @end

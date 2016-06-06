@@ -9,10 +9,12 @@
 #import "SVXIntroduceViewController.h"
 #import "SVXDetailHeadView.h"
 #import "SVXIntroductionTableViewCell.h"
+#import "SVXIndBottomView.h"
+#import "SVXDetailShopViewController.h"
 
 static NSString * const kInstroductCell = @"kInstroductCell";
 
-@interface SVXIntroduceViewController ()<SVXHeadDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface SVXIntroduceViewController ()<SVXHeadDelegate, UITableViewDelegate, UITableViewDataSource, SVXIndBottomDelegate>
 
 @property (nonatomic, copy)   NSArray               *listArray;
 @property (nonatomic, copy)   NSArray               *containArray;
@@ -67,13 +69,6 @@ static NSString * const kInstroductCell = @"kInstroductCell";
 
 #pragma mark - 初始化NavigationBarItem
 - (void)p_initWithNavigationBarItem {
-    UITapGestureRecognizer *shoucanTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                        action:@selector(shoucanTapAction:)];
-    UIImageView *leftView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 23, 22)];
-    leftView.image = [UIImage imageNamed:@"shoucan"];
-    leftView.userInteractionEnabled = YES;
-    [leftView addGestureRecognizer:shoucanTapGesture];
-    UIBarButtonItem *shoucanItem = [[UIBarButtonItem alloc] initWithCustomView:leftView];
     
     UIImageView *rightView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
     rightView.image = [UIImage imageNamed:@"share"];
@@ -83,11 +78,24 @@ static NSString * const kInstroductCell = @"kInstroductCell";
     [rightView addGestureRecognizer:shareTap];
     UIBarButtonItem *shareItem = [[UIBarButtonItem alloc] initWithCustomView:rightView];
     
-    self.navigationItem.rightBarButtonItems = @[shareItem, shoucanItem];
+    self.navigationItem.rightBarButtonItems = @[shareItem];
 }
 
 #pragma mark - 初始化ScrollView
 - (void)p_setupTableView {
+    
+    SVXIndBottomView *svxInd = [[SVXIndBottomView alloc] init];
+    svxInd.indDelegate = self;
+    svxInd.isSave = NO;
+    svxInd.layer.borderWidth = 0.5;
+    svxInd.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    [self.view addSubview:svxInd];
+    
+    [svxInd mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.view);
+        make.width.equalTo(self.view.mas_width);
+        make.height.equalTo(44);
+    }];
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)
                                                   style:UITableViewStyleGrouped];
@@ -106,7 +114,8 @@ static NSString * const kInstroductCell = @"kInstroductCell";
     [self.view addSubview:self.tableView];
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.bottom.equalTo(self.view);
+        make.left.right.top.equalTo(self.view);
+        make.bottom.equalTo(svxInd.mas_top).offset(0);
     }];
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SVXIntroductionTableViewCell class]) bundle:nil]
@@ -167,11 +176,6 @@ static NSString * const kInstroductCell = @"kInstroductCell";
     return cell;
 }
 
-#pragma mark - 收藏按钮事件
-- (void)shoucanTapAction:(UITapGestureRecognizer *)tap {
-    NSLog(@"shoucan");
-}
-
 #pragma mark - 分享按钮事件
 - (void)shareAction:(UITapGestureRecognizer *)tap {
     NSLog(@"share");
@@ -180,6 +184,17 @@ static NSString * const kInstroductCell = @"kInstroductCell";
 #pragma mark - SVXHeadDelegate
 - (void)tapAction {
     NSLog(@"单击图片");
+}
+
+#pragma mark - SVXIndBottomDelegate
+- (void)getResult:(BOOL)isSave {
+    NSLog(@"%d", isSave);
+}
+
+- (void)buyAction {
+    SVXDetailShopViewController *svxDetail = [[SVXDetailShopViewController alloc] init];
+    svxDetail.title = self.title;
+    [self.navigationController pushViewController:svxDetail animated:YES];
 }
 
 @end
