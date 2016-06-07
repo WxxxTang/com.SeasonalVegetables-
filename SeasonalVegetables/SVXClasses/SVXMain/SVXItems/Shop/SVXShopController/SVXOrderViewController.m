@@ -13,6 +13,7 @@
 #import "SVXOrderFootView.h"
 #import "SVXOrderPriceView.h"
 #import "SVXChooseAddViewController.h"
+#import "SVXPayViewController.h"
 
 @interface SVXOrderViewController () <UITableViewDelegate, UITableViewDataSource, UITextViewDelegate, SVXOrderBuyDelegate, SVXChooseDelegate>
 
@@ -208,7 +209,13 @@
 
 #pragma mark - SVXOrderBuyDelegate
 - (void)orderBuyAction {
-    NSLog(@"去结算");
+    if ([[self.addDic objectForKey:@"nameLabel"] isEqualToString:@"姓名(无)"]) {
+        NSLog(@"请添加收货地址");
+        return;
+    }
+    SVXPayViewController *payVC = [[SVXPayViewController alloc] init];
+    payVC.modalPresentationStyle = UIModalPresentationCustom;
+    [self presentViewController:payVC animated:YES completion:nil];
 }
 
 #pragma mark - SVXChooseDelegate

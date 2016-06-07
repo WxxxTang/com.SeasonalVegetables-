@@ -56,6 +56,13 @@
 		66ED689C1D059DA700C31C2F /* SVXChooseAddTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED689A1D059DA700C31C2F /* SVXChooseAddTableViewCell.m */; };
 		66ED689D1D059DA700C31C2F /* SVXChooseAddTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66ED689B1D059DA700C31C2F /* SVXChooseAddTableViewCell.xib */; };
 		66ED68A01D05E30B00C31C2F /* SVXEditAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED689F1D05E30B00C31C2F /* SVXEditAddressViewController.m */; };
+		66ED68A51D06B4D100C31C2F /* SVXEditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED68A31D06B4D100C31C2F /* SVXEditTableViewCell.m */; };
+		66ED68A61D06B4D100C31C2F /* SVXEditTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66ED68A41D06B4D100C31C2F /* SVXEditTableViewCell.xib */; };
+		66ED68AA1D06BD8F00C31C2F /* SVXEditAddTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED68A81D06BD8F00C31C2F /* SVXEditAddTableViewCell.m */; };
+		66ED68AB1D06BD8F00C31C2F /* SVXEditAddTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66ED68A91D06BD8F00C31C2F /* SVXEditAddTableViewCell.xib */; };
+		66ED691C1D06ED8D00C31C2F /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66ED691B1D06ED8D00C31C2F /* city.plist */; };
+		66ED69201D06EDDE00C31C2F /* SVXPickerViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED691F1D06EDDE00C31C2F /* SVXPickerViewViewController.m */; };
+		66ED69231D06F25F00C31C2F /* SVXPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED69221D06F25F00C31C2F /* SVXPayViewController.m */; };
 		9401D86D3A87C4C74600E499 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0C6063C5F514D5530417DE /* libPods.a */; };
 		B2E2A9B01CF97464009DE9F6 /* SVXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E2A9AF1CF97464009DE9F6 /* SVXLoginViewController.m */; };
 /* End PBXBuildFile section */
@@ -168,6 +175,17 @@
 		66ED689B1D059DA700C31C2F /* SVXChooseAddTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVXChooseAddTableViewCell.xib; sourceTree = "<group>"; };
 		66ED689E1D05E30B00C31C2F /* SVXEditAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXEditAddressViewController.h; sourceTree = "<group>"; };
 		66ED689F1D05E30B00C31C2F /* SVXEditAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXEditAddressViewController.m; sourceTree = "<group>"; };
+		66ED68A21D06B4D100C31C2F /* SVXEditTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXEditTableViewCell.h; sourceTree = "<group>"; };
+		66ED68A31D06B4D100C31C2F /* SVXEditTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXEditTableViewCell.m; sourceTree = "<group>"; };
+		66ED68A41D06B4D100C31C2F /* SVXEditTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVXEditTableViewCell.xib; sourceTree = "<group>"; };
+		66ED68A71D06BD8F00C31C2F /* SVXEditAddTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXEditAddTableViewCell.h; sourceTree = "<group>"; };
+		66ED68A81D06BD8F00C31C2F /* SVXEditAddTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXEditAddTableViewCell.m; sourceTree = "<group>"; };
+		66ED68A91D06BD8F00C31C2F /* SVXEditAddTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVXEditAddTableViewCell.xib; sourceTree = "<group>"; };
+		66ED691B1D06ED8D00C31C2F /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
+		66ED691E1D06EDDE00C31C2F /* SVXPickerViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXPickerViewViewController.h; sourceTree = "<group>"; };
+		66ED691F1D06EDDE00C31C2F /* SVXPickerViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXPickerViewViewController.m; sourceTree = "<group>"; };
+		66ED69211D06F25F00C31C2F /* SVXPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXPayViewController.h; sourceTree = "<group>"; };
+		66ED69221D06F25F00C31C2F /* SVXPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXPayViewController.m; sourceTree = "<group>"; };
 		8D2354520446ADE43C8A6E57 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9178C01D0ACF3D77E1AF3EAC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9F0C6063C5F514D5530417DE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -378,6 +396,7 @@
 		663F2AA41CF60E0600F23D40 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				66ED691B1D06ED8D00C31C2F /* city.plist */,
 				663F2AAD1CF60E0600F23D40 /* Main.storyboard */,
 				663F2AB01CF60E0600F23D40 /* Assets.xcassets */,
 				663F2AB21CF60E0600F23D40 /* LaunchScreen.storyboard */,
@@ -410,6 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				3B0E8D651CF7643F003F39C8 /* SVXItems */,
+				66ED691D1D06EDCC00C31C2F /* SVXTools */,
 				666099B11CF74B71001FAB4E /* SVXMain */,
 				3B0E8D6A1CF7647B003F39C8 /* SVXCategoties */,
 			);
@@ -442,6 +462,7 @@
 		66AEE9E51CFC6C0200AF02D3 /* SVXShopView */ = {
 			isa = PBXGroup;
 			children = (
+				66ED68A11D06B4B900C31C2F /* EditView */,
 				66ED68951D059D7600C31C2F /* ChooseAddress */,
 				66ED68791D04574700C31C2F /* OrderView */,
 				66ED68771D04572C00C31C2F /* DetailView */,
@@ -516,6 +537,8 @@
 				66ED68931D059A8300C31C2F /* SVXChooseAddViewController.m */,
 				66ED689E1D05E30B00C31C2F /* SVXEditAddressViewController.h */,
 				66ED689F1D05E30B00C31C2F /* SVXEditAddressViewController.m */,
+				66ED69211D06F25F00C31C2F /* SVXPayViewController.h */,
+				66ED69221D06F25F00C31C2F /* SVXPayViewController.m */,
 			);
 			name = Order;
 			sourceTree = "<group>";
@@ -548,6 +571,28 @@
 				66ED689B1D059DA700C31C2F /* SVXChooseAddTableViewCell.xib */,
 			);
 			name = ChooseAddress;
+			sourceTree = "<group>";
+		};
+		66ED68A11D06B4B900C31C2F /* EditView */ = {
+			isa = PBXGroup;
+			children = (
+				66ED68A21D06B4D100C31C2F /* SVXEditTableViewCell.h */,
+				66ED68A31D06B4D100C31C2F /* SVXEditTableViewCell.m */,
+				66ED68A41D06B4D100C31C2F /* SVXEditTableViewCell.xib */,
+				66ED68A71D06BD8F00C31C2F /* SVXEditAddTableViewCell.h */,
+				66ED68A81D06BD8F00C31C2F /* SVXEditAddTableViewCell.m */,
+				66ED68A91D06BD8F00C31C2F /* SVXEditAddTableViewCell.xib */,
+			);
+			name = EditView;
+			sourceTree = "<group>";
+		};
+		66ED691D1D06EDCC00C31C2F /* SVXTools */ = {
+			isa = PBXGroup;
+			children = (
+				66ED691E1D06EDDE00C31C2F /* SVXPickerViewViewController.h */,
+				66ED691F1D06EDDE00C31C2F /* SVXPickerViewViewController.m */,
+			);
+			path = SVXTools;
 			sourceTree = "<group>";
 		};
 		B2E2A9AD1CF9744C009DE9F6 /* Login */ = {
@@ -677,6 +722,8 @@
 				663F2AB41CF60E0600F23D40 /* LaunchScreen.storyboard in Resources */,
 				66ED687E1D04592300C31C2F /* SVXOrderTitleTableViewCell.xib in Resources */,
 				662CA5011CFC33FE0087D788 /* SVXHotSearchTableViewCell.xib in Resources */,
+				66ED68AB1D06BD8F00C31C2F /* SVXEditAddTableViewCell.xib in Resources */,
+				66ED68A61D06B4D100C31C2F /* SVXEditTableViewCell.xib in Resources */,
 				66ED688B1D045E1C00C31C2F /* SVXGetGoodsTableViewCell.xib in Resources */,
 				663F2AB11CF60E0600F23D40 /* Assets.xcassets in Resources */,
 				666A42CF1CFEBF5A0058C5AA /* SVXOddsTableViewCell.xib in Resources */,
@@ -684,6 +731,7 @@
 				666A42DF1CFF0BFA0058C5AA /* SVXShopNextCollectionViewCell.xib in Resources */,
 				66ED689D1D059DA700C31C2F /* SVXChooseAddTableViewCell.xib in Resources */,
 				66ED68831D045B9C00C31C2F /* SVXNoteTableViewCell.xib in Resources */,
+				66ED691C1D06ED8D00C31C2F /* city.plist in Resources */,
 				666CFA7C1D0271A9008AE70F /* SVXIntroductionTableViewCell.xib in Resources */,
 				663F2AAF1CF60E0600F23D40 /* Main.storyboard in Resources */,
 			);
@@ -785,13 +833,17 @@
 				663F2AA61CF60E0600F23D40 /* main.m in Sources */,
 				66ED689C1D059DA700C31C2F /* SVXChooseAddTableViewCell.m in Sources */,
 				66D2FE491D041E1100ECB60A /* SVXIndBottomView.m in Sources */,
+				66ED69231D06F25F00C31C2F /* SVXPayViewController.m in Sources */,
 				662CA4E41CFB377E0087D788 /* SVXDetailViewController.m in Sources */,
 				666A42E21D0063B20058C5AA /* SVXIntroduceViewController.m in Sources */,
 				66ED68941D059A8300C31C2F /* SVXChooseAddViewController.m in Sources */,
 				66ED68751D0456CE00C31C2F /* SVXOrderViewController.m in Sources */,
 				66AEE9EF1CFC6C4D00AF02D3 /* SVXShopListViewController.m in Sources */,
 				B2E2A9B01CF97464009DE9F6 /* SVXLoginViewController.m in Sources */,
+				66ED69201D06EDDE00C31C2F /* SVXPickerViewViewController.m in Sources */,
 				66ED688E1D058F5000C31C2F /* SVXOrderFootView.m in Sources */,
+				66ED68A51D06B4D100C31C2F /* SVXEditTableViewCell.m in Sources */,
+				66ED68AA1D06BD8F00C31C2F /* SVXEditAddTableViewCell.m in Sources */,
 				666099B71CF74B90001FAB4E /* ViewController.m in Sources */,
 				662CA4F11CFC26D90087D788 /* SVXRecomViewController.m in Sources */,
 			);

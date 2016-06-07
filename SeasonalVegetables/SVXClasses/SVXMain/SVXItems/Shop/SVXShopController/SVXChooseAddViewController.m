@@ -12,7 +12,7 @@
 
 static NSString * const kChooseAddCell = @"kChooseAddCell";
 
-@interface SVXChooseAddViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface SVXChooseAddViewController ()<UITableViewDelegate, UITableViewDataSource, SVXEditDelegate>
 
 @property (nonatomic, strong) UITableView       *tableView;
 @property (nonatomic, copy)   NSMutableArray    *addressArray;
@@ -48,7 +48,7 @@ static NSString * const kChooseAddCell = @"kChooseAddCell";
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - 初始化ScrollView
+#pragma mark - 初始化TableView
 - (void)p_setupTableView {
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStyleGrouped];
@@ -58,8 +58,6 @@ static NSString * const kChooseAddCell = @"kChooseAddCell";
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.rowHeight = 73;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.sectionHeaderHeight = 2;
-    self.tableView.sectionFooterHeight = 2;
     
     self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 5)];
     
@@ -95,12 +93,8 @@ static NSString * const kChooseAddCell = @"kChooseAddCell";
 }
 
 #pragma mark - UITableViewDataSource
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.addressArray.count;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return self.addressArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -118,11 +112,41 @@ static NSString * const kChooseAddCell = @"kChooseAddCell";
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-#pragma mark - ButtonAction 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"是否删除？"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"是" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self.addressArray removeObjectAtIndex:indexPath.row];
+        NSArray *deleteItems = @[indexPath];
+        [self.tableView deleteRowsAtIndexPaths:deleteItems withRowAnimation:UITableViewRowAnimationMiddle];
+    }];
+    [alert addAction:yesAction];
+    
+    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleDestructive handler:nil];
+    [alert addAction:noAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+#pragma mark - ButtonAction
 - (void)addButtonAction:(UIButton *)sender {
     SVXEditAddressViewController *svxEdit = [[SVXEditAddressViewController alloc] init];
     svxEdit.title = @"编辑地址";
+    svxEdit.editDelegate = self;
     [self.navigationController pushViewController:svxEdit animated:YES];
+}
+
+- (void)addAddress:(NSDictionary *)dic {
+    [self.addressArray addObject:dic];
+    [self.tableView reloadData];
 }
 
 @end

@@ -27,7 +27,6 @@ static NSString * const kHotSearchCell = @"kHotSearchCell";
     
     [self p_initWithNavigationBarItem];
     [self p_setupSearchBar];
-    
     [self p_setupTableView];
 }
 

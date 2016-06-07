@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol SVXEditDelegate <NSObject>
+
+- (void)addAddress:(NSDictionary *)dic;
+
+@end
+
 @interface SVXEditAddressViewController : UIViewController
+
+@property (nonatomic, weak) id<SVXEditDelegate> editDelegate;
 
 @end

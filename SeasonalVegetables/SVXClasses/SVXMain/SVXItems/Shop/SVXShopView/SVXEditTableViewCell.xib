@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SVXEditTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bd1-F7-HC4">
+                        <rect key="frame" x="20" y="11" width="51" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="2a9-Rk-OXT"/>
+                            <constraint firstAttribute="width" constant="51" id="LGm-RD-Hyj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="12"/>
+                        <color key="textColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oMC-MN-sRh">
+                        <rect key="frame" x="79" y="8" width="233" height="30"/>
+                        <color key="textColor" red="0.23921568627450981" green="0.23921568627450981" blue="0.23921568627450981" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="12"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bd1-F7-HC4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="00a-dC-dOS"/>
+                    <constraint firstItem="oMC-MN-sRh" firstAttribute="leading" secondItem="bd1-F7-HC4" secondAttribute="trailing" constant="8" id="Cfk-gM-Rgl"/>
+                    <constraint firstItem="bd1-F7-HC4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="QLk-yf-XdM"/>
+                    <constraint firstAttribute="trailing" secondItem="oMC-MN-sRh" secondAttribute="trailing" constant="8" id="Ro6-PM-WcB"/>
+                    <constraint firstItem="oMC-MN-sRh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="s8z-FA-VZa"/>
+                    <constraint firstAttribute="bottom" secondItem="oMC-MN-sRh" secondAttribute="bottom" constant="5.5" id="wGI-vm-OKq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="inputField" destination="oMC-MN-sRh" id="Sqn-o5-AMa"/>
+                <outlet property="nameLabel" destination="bd1-F7-HC4" id="nEL-3O-50H"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
