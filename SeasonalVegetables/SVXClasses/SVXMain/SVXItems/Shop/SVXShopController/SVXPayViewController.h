@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol SVXPayDelegate <NSObject>
+
+- (void)payResult;
+
+@end
+
 @interface SVXPayViewController : UIViewController
+
+@property (nonatomic, weak) id<SVXPayDelegate> payDelegate;
 
 @end

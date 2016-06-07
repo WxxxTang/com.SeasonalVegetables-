@@ -63,6 +63,7 @@
 		66ED691C1D06ED8D00C31C2F /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66ED691B1D06ED8D00C31C2F /* city.plist */; };
 		66ED69201D06EDDE00C31C2F /* SVXPickerViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED691F1D06EDDE00C31C2F /* SVXPickerViewViewController.m */; };
 		66ED69231D06F25F00C31C2F /* SVXPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED69221D06F25F00C31C2F /* SVXPayViewController.m */; };
+		66ED69281D0706D800C31C2F /* SVXFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66ED69271D0706D800C31C2F /* SVXFeedBackViewController.m */; };
 		9401D86D3A87C4C74600E499 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0C6063C5F514D5530417DE /* libPods.a */; };
 		B2E2A9B01CF97464009DE9F6 /* SVXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E2A9AF1CF97464009DE9F6 /* SVXLoginViewController.m */; };
 /* End PBXBuildFile section */
@@ -186,6 +187,8 @@
 		66ED691F1D06EDDE00C31C2F /* SVXPickerViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXPickerViewViewController.m; sourceTree = "<group>"; };
 		66ED69211D06F25F00C31C2F /* SVXPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXPayViewController.h; sourceTree = "<group>"; };
 		66ED69221D06F25F00C31C2F /* SVXPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXPayViewController.m; sourceTree = "<group>"; };
+		66ED69261D0706D800C31C2F /* SVXFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXFeedBackViewController.h; sourceTree = "<group>"; };
+		66ED69271D0706D800C31C2F /* SVXFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXFeedBackViewController.m; sourceTree = "<group>"; };
 		8D2354520446ADE43C8A6E57 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9178C01D0ACF3D77E1AF3EAC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9F0C6063C5F514D5530417DE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -273,6 +276,8 @@
 		3B0E8D691CF7643F003F39C8 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				66ED69251D0706BF00C31C2F /* SVXUserView */,
+				66ED69241D0706B100C31C2F /* SVXUserController */,
 				3B0E8D771CF7654C003F39C8 /* SVXUserViewController.h */,
 				3B0E8D781CF7654C003F39C8 /* SVXUserViewController.m */,
 			);
@@ -595,6 +600,22 @@
 			path = SVXTools;
 			sourceTree = "<group>";
 		};
+		66ED69241D0706B100C31C2F /* SVXUserController */ = {
+			isa = PBXGroup;
+			children = (
+				66ED69261D0706D800C31C2F /* SVXFeedBackViewController.h */,
+				66ED69271D0706D800C31C2F /* SVXFeedBackViewController.m */,
+			);
+			path = SVXUserController;
+			sourceTree = "<group>";
+		};
+		66ED69251D0706BF00C31C2F /* SVXUserView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SVXUserView;
+			sourceTree = "<group>";
+		};
 		B2E2A9AD1CF9744C009DE9F6 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -846,6 +867,7 @@
 				66ED68AA1D06BD8F00C31C2F /* SVXEditAddTableViewCell.m in Sources */,
 				666099B71CF74B90001FAB4E /* ViewController.m in Sources */,
 				662CA4F11CFC26D90087D788 /* SVXRecomViewController.m in Sources */,
+				66ED69281D0706D800C31C2F /* SVXFeedBackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

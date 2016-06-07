@@ -11,11 +11,12 @@
 #import "SVXHomeViewController.h"
 #import "SVXShopViewController.h"
 #import "SVXUserViewController.h"
+#import "SVXFeedBackViewController.h"
 
 @interface SVXTabBarViewController ()<UITabBarDelegate>
 @property (nonatomic,strong) SVXHomeViewController* homeVC;
 @property (nonatomic,strong) SVXShopViewController* shopVC;
-@property (nonatomic,strong) SVXUserViewController* userVC;
+@property (nonatomic,strong) SVXFeedBackViewController* userVC;
 
 @end
 
@@ -33,7 +34,7 @@
                      normalImage:[UIImage imageNamed:@"shoping-1"]
                      selectImage:[UIImage imageNamed:@"shoping-2"]
                            title:@"商城"];
-    _userVC =[[SVXUserViewController alloc] init];
+    _userVC =[[SVXFeedBackViewController alloc] init];
     [self addChildViewController:_userVC
                      normalImage:[UIImage imageNamed:@"user-unchoose-1"]
                      selectImage:[UIImage imageNamed:@"user-unchoose-2"]

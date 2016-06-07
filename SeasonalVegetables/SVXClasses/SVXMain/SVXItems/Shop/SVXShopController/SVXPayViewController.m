@@ -22,7 +22,7 @@ static NSString * const kSVXPayCell = @"kSVXPayCell";
 
 - (NSArray *)images {
     if (_images == nil) {
-        _images = @[@"zhifubao", @"weixin"];
+        _images = @[@"zhifubao", @"weixin2"];
     }
     return _images;
 }
@@ -139,6 +139,7 @@ static NSString * const kSVXPayCell = @"kSVXPayCell";
     }
     
     [self dismissViewControllerAnimated:NO completion:nil];
+    [self.payDelegate payResult];
 }
 
 #pragma mark - cancelButtonAction

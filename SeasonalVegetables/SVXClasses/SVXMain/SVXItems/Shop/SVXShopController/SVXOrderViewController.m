@@ -15,7 +15,7 @@
 #import "SVXChooseAddViewController.h"
 #import "SVXPayViewController.h"
 
-@interface SVXOrderViewController () <UITableViewDelegate, UITableViewDataSource, UITextViewDelegate, SVXOrderBuyDelegate, SVXChooseDelegate>
+@interface SVXOrderViewController () <UITableViewDelegate, UITableViewDataSource, UITextViewDelegate, SVXOrderBuyDelegate, SVXChooseDelegate, SVXPayDelegate>
 
 @property (nonatomic, strong) UITableView   *tableView;
 @property (nonatomic, copy)   NSDictionary  *addDic;
@@ -214,6 +214,7 @@
         return;
     }
     SVXPayViewController *payVC = [[SVXPayViewController alloc] init];
+    payVC.payDelegate = self;
     payVC.modalPresentationStyle = UIModalPresentationCustom;
     [self presentViewController:payVC animated:YES completion:nil];
 }
@@ -222,6 +223,11 @@
 - (void)getAddress:(NSDictionary *)dic {
     self.addDic = dic;
     [self.tableView reloadData];
+}
+
+#pragma mark - SVXPayDelegate
+- (void)payResult {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark 计算键盘的高度
