@@ -16,7 +16,7 @@
 @interface SVXTabBarViewController ()<UITabBarDelegate>
 @property (nonatomic,strong) SVXHomeViewController* homeVC;
 @property (nonatomic,strong) SVXShopViewController* shopVC;
-@property (nonatomic,strong) SVXFeedBackViewController* userVC;
+@property (nonatomic,strong) SVXUserViewController* userVC;
 
 @end
 
@@ -34,7 +34,7 @@
                      normalImage:[UIImage imageNamed:@"shoping-1"]
                      selectImage:[UIImage imageNamed:@"shoping-2"]
                            title:@"商城"];
-    _userVC =[[SVXFeedBackViewController alloc] init];
+    _userVC =[[SVXUserViewController alloc] init];
     [self addChildViewController:_userVC
                      normalImage:[UIImage imageNamed:@"user-unchoose-1"]
                      selectImage:[UIImage imageNamed:@"user-unchoose-2"]
@@ -57,17 +57,6 @@
     NSDictionary *dic = @{NSForegroundColorAttributeName : [UIColor grayColor],
                           NSFontAttributeName : [UIFont fontWithName:@"PingFang SC" size:17.f]};
     [[UINavigationBar appearance] setTitleTextAttributes:dic];
-    
-    
-//    [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:202/255.0
-//                                                           green:193/255.0 blue:104/255.0 alpha:1]];
-    
-    /* //在下面设置字体和颜色
-    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:202/255.0
-                                                       green:193/255.0 blue:104/255.0 alpha:1]];
-     */
-    
-    
  
 }
 - (void)viewDidLoad {

@@ -25,6 +25,23 @@
 		663F2ABF1CF60E0600F23D40 /* SeasonalVegetablesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 663F2ABE1CF60E0600F23D40 /* SeasonalVegetablesTests.m */; };
 		663F2ACA1CF60E0600F23D40 /* SeasonalVegetablesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 663F2AC91CF60E0600F23D40 /* SeasonalVegetablesUITests.m */; };
 		6654D2C71D03268C00F9C66B /* SVXBuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6654D2C61D03268C00F9C66B /* SVXBuyView.m */; };
+		665FE8661D3BADFE000DCAE4 /* SVXHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FE8611D3BADFE000DCAE4 /* SVXHeaderView.m */; };
+		665FE8671D3BADFE000DCAE4 /* SVXOrderListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FE8631D3BADFE000DCAE4 /* SVXOrderListTableViewCell.m */; };
+		665FE8681D3BADFE000DCAE4 /* SVXUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FE8651D3BADFE000DCAE4 /* SVXUserTableViewCell.m */; };
+		665FE86C1D3BAE24000DCAE4 /* SVXHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FE86B1D3BAE24000DCAE4 /* SVXHeaderModel.m */; };
+		665FE87F1D3BAE74000DCAE4 /* SVXNightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FE8781D3BAE74000DCAE4 /* SVXNightTableViewCell.m */; };
+		665FE8801D3BAE74000DCAE4 /* SVXPersonalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FE87A1D3BAE74000DCAE4 /* SVXPersonalCell.m */; };
+		665FE8811D3BAE74000DCAE4 /* SVXPersonalCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FE87C1D3BAE74000DCAE4 /* SVXPersonalCell2.m */; };
+		665FE8821D3BAE74000DCAE4 /* SVXSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FE87E1D3BAE74000DCAE4 /* SVXSettingTableViewCell.m */; };
+		665FE8921D3BAE7D000DCAE4 /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FE8851D3BAE7D000DCAE4 /* AddressViewController.m */; };
+		665FE8931D3BAE7D000DCAE4 /* SexTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FE8871D3BAE7D000DCAE4 /* SexTableViewController.m */; };
+		665FE8941D3BAE7D000DCAE4 /* SVXBindingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FE8891D3BAE7D000DCAE4 /* SVXBindingViewController.m */; };
+		665FE8951D3BAE7D000DCAE4 /* SVXChangeheadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FE88B1D3BAE7D000DCAE4 /* SVXChangeheadViewController.m */; };
+		665FE8961D3BAE7D000DCAE4 /* SVXPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FE88D1D3BAE7D000DCAE4 /* SVXPasswordViewController.m */; };
+		665FE8971D3BAE7D000DCAE4 /* SVXPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FE88F1D3BAE7D000DCAE4 /* SVXPersonalViewController.m */; };
+		665FE8981D3BAE7D000DCAE4 /* SVXSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FE8911D3BAE7D000DCAE4 /* SVXSettingViewController.m */; };
+		665FE89B1D3BAEA0000DCAE4 /* SVXShoppingCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FE89A1D3BAEA0000DCAE4 /* SVXShoppingCartViewController.m */; };
+		665FE89E1D3BAEAA000DCAE4 /* SXShoppingCartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FE89D1D3BAEAA000DCAE4 /* SXShoppingCartTableViewCell.m */; };
 		666099B61CF74B90001FAB4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 666099B31CF74B90001FAB4E /* AppDelegate.m */; };
 		666099B71CF74B90001FAB4E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 666099B51CF74B90001FAB4E /* ViewController.m */; };
 		666A42CE1CFEBF5A0058C5AA /* SVXOddsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 666A42CC1CFEBF5A0058C5AA /* SVXOddsTableViewCell.m */; };
@@ -121,6 +138,40 @@
 		663F2ACB1CF60E0600F23D40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6654D2C51D03268C00F9C66B /* SVXBuyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXBuyView.h; sourceTree = "<group>"; };
 		6654D2C61D03268C00F9C66B /* SVXBuyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXBuyView.m; sourceTree = "<group>"; };
+		665FE8601D3BADFE000DCAE4 /* SVXHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXHeaderView.h; sourceTree = "<group>"; };
+		665FE8611D3BADFE000DCAE4 /* SVXHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXHeaderView.m; sourceTree = "<group>"; };
+		665FE8621D3BADFE000DCAE4 /* SVXOrderListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXOrderListTableViewCell.h; sourceTree = "<group>"; };
+		665FE8631D3BADFE000DCAE4 /* SVXOrderListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXOrderListTableViewCell.m; sourceTree = "<group>"; };
+		665FE8641D3BADFE000DCAE4 /* SVXUserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXUserTableViewCell.h; sourceTree = "<group>"; };
+		665FE8651D3BADFE000DCAE4 /* SVXUserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXUserTableViewCell.m; sourceTree = "<group>"; };
+		665FE86A1D3BAE24000DCAE4 /* SVXHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXHeaderModel.h; sourceTree = "<group>"; };
+		665FE86B1D3BAE24000DCAE4 /* SVXHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXHeaderModel.m; sourceTree = "<group>"; };
+		665FE8771D3BAE74000DCAE4 /* SVXNightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXNightTableViewCell.h; sourceTree = "<group>"; };
+		665FE8781D3BAE74000DCAE4 /* SVXNightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXNightTableViewCell.m; sourceTree = "<group>"; };
+		665FE8791D3BAE74000DCAE4 /* SVXPersonalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXPersonalCell.h; sourceTree = "<group>"; };
+		665FE87A1D3BAE74000DCAE4 /* SVXPersonalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXPersonalCell.m; sourceTree = "<group>"; };
+		665FE87B1D3BAE74000DCAE4 /* SVXPersonalCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXPersonalCell2.h; sourceTree = "<group>"; };
+		665FE87C1D3BAE74000DCAE4 /* SVXPersonalCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXPersonalCell2.m; sourceTree = "<group>"; };
+		665FE87D1D3BAE74000DCAE4 /* SVXSettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXSettingTableViewCell.h; sourceTree = "<group>"; };
+		665FE87E1D3BAE74000DCAE4 /* SVXSettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXSettingTableViewCell.m; sourceTree = "<group>"; };
+		665FE8841D3BAE7D000DCAE4 /* AddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressViewController.h; sourceTree = "<group>"; };
+		665FE8851D3BAE7D000DCAE4 /* AddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
+		665FE8861D3BAE7D000DCAE4 /* SexTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SexTableViewController.h; sourceTree = "<group>"; };
+		665FE8871D3BAE7D000DCAE4 /* SexTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SexTableViewController.m; sourceTree = "<group>"; };
+		665FE8881D3BAE7D000DCAE4 /* SVXBindingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXBindingViewController.h; sourceTree = "<group>"; };
+		665FE8891D3BAE7D000DCAE4 /* SVXBindingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXBindingViewController.m; sourceTree = "<group>"; };
+		665FE88A1D3BAE7D000DCAE4 /* SVXChangeheadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXChangeheadViewController.h; sourceTree = "<group>"; };
+		665FE88B1D3BAE7D000DCAE4 /* SVXChangeheadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXChangeheadViewController.m; sourceTree = "<group>"; };
+		665FE88C1D3BAE7D000DCAE4 /* SVXPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXPasswordViewController.h; sourceTree = "<group>"; };
+		665FE88D1D3BAE7D000DCAE4 /* SVXPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXPasswordViewController.m; sourceTree = "<group>"; };
+		665FE88E1D3BAE7D000DCAE4 /* SVXPersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXPersonalViewController.h; sourceTree = "<group>"; };
+		665FE88F1D3BAE7D000DCAE4 /* SVXPersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXPersonalViewController.m; sourceTree = "<group>"; };
+		665FE8901D3BAE7D000DCAE4 /* SVXSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXSettingViewController.h; sourceTree = "<group>"; };
+		665FE8911D3BAE7D000DCAE4 /* SVXSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXSettingViewController.m; sourceTree = "<group>"; };
+		665FE8991D3BAEA0000DCAE4 /* SVXShoppingCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVXShoppingCartViewController.h; sourceTree = "<group>"; };
+		665FE89A1D3BAEA0000DCAE4 /* SVXShoppingCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVXShoppingCartViewController.m; sourceTree = "<group>"; };
+		665FE89C1D3BAEAA000DCAE4 /* SXShoppingCartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXShoppingCartTableViewCell.h; sourceTree = "<group>"; };
+		665FE89D1D3BAEAA000DCAE4 /* SXShoppingCartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXShoppingCartTableViewCell.m; sourceTree = "<group>"; };
 		666099B21CF74B90001FAB4E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		666099B31CF74B90001FAB4E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		666099B41CF74B90001FAB4E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -276,6 +327,10 @@
 		3B0E8D691CF7643F003F39C8 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				665FE8831D3BAE7D000DCAE4 /* SVXSettingController */,
+				665FE8761D3BAE74000DCAE4 /* SVXSettingView */,
+				665FE8751D3BAE64000DCAE4 /* SVXSettingModel */,
+				665FE8691D3BAE15000DCAE4 /* SVXUserModel */,
 				66ED69251D0706BF00C31C2F /* SVXUserView */,
 				66ED69241D0706B100C31C2F /* SVXUserController */,
 				3B0E8D771CF7654C003F39C8 /* SVXUserViewController.h */,
@@ -430,6 +485,58 @@
 			path = SeasonalVegetablesUITests;
 			sourceTree = "<group>";
 		};
+		665FE8691D3BAE15000DCAE4 /* SVXUserModel */ = {
+			isa = PBXGroup;
+			children = (
+				665FE86A1D3BAE24000DCAE4 /* SVXHeaderModel.h */,
+				665FE86B1D3BAE24000DCAE4 /* SVXHeaderModel.m */,
+			);
+			path = SVXUserModel;
+			sourceTree = "<group>";
+		};
+		665FE8751D3BAE64000DCAE4 /* SVXSettingModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SVXSettingModel;
+			sourceTree = "<group>";
+		};
+		665FE8761D3BAE74000DCAE4 /* SVXSettingView */ = {
+			isa = PBXGroup;
+			children = (
+				665FE8771D3BAE74000DCAE4 /* SVXNightTableViewCell.h */,
+				665FE8781D3BAE74000DCAE4 /* SVXNightTableViewCell.m */,
+				665FE8791D3BAE74000DCAE4 /* SVXPersonalCell.h */,
+				665FE87A1D3BAE74000DCAE4 /* SVXPersonalCell.m */,
+				665FE87B1D3BAE74000DCAE4 /* SVXPersonalCell2.h */,
+				665FE87C1D3BAE74000DCAE4 /* SVXPersonalCell2.m */,
+				665FE87D1D3BAE74000DCAE4 /* SVXSettingTableViewCell.h */,
+				665FE87E1D3BAE74000DCAE4 /* SVXSettingTableViewCell.m */,
+			);
+			path = SVXSettingView;
+			sourceTree = "<group>";
+		};
+		665FE8831D3BAE7D000DCAE4 /* SVXSettingController */ = {
+			isa = PBXGroup;
+			children = (
+				665FE8841D3BAE7D000DCAE4 /* AddressViewController.h */,
+				665FE8851D3BAE7D000DCAE4 /* AddressViewController.m */,
+				665FE8861D3BAE7D000DCAE4 /* SexTableViewController.h */,
+				665FE8871D3BAE7D000DCAE4 /* SexTableViewController.m */,
+				665FE8881D3BAE7D000DCAE4 /* SVXBindingViewController.h */,
+				665FE8891D3BAE7D000DCAE4 /* SVXBindingViewController.m */,
+				665FE88A1D3BAE7D000DCAE4 /* SVXChangeheadViewController.h */,
+				665FE88B1D3BAE7D000DCAE4 /* SVXChangeheadViewController.m */,
+				665FE88C1D3BAE7D000DCAE4 /* SVXPasswordViewController.h */,
+				665FE88D1D3BAE7D000DCAE4 /* SVXPasswordViewController.m */,
+				665FE88E1D3BAE7D000DCAE4 /* SVXPersonalViewController.h */,
+				665FE88F1D3BAE7D000DCAE4 /* SVXPersonalViewController.m */,
+				665FE8901D3BAE7D000DCAE4 /* SVXSettingViewController.h */,
+				665FE8911D3BAE7D000DCAE4 /* SVXSettingViewController.m */,
+			);
+			path = SVXSettingController;
+			sourceTree = "<group>";
+		};
 		666099AC1CF74A2B001FAB4E /* SVXClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -457,6 +564,8 @@
 		66AEE9E31CFC6BDF00AF02D3 /* SVXShopController */ = {
 			isa = PBXGroup;
 			children = (
+				665FE8991D3BAEA0000DCAE4 /* SVXShoppingCartViewController.h */,
+				665FE89A1D3BAEA0000DCAE4 /* SVXShoppingCartViewController.m */,
 				66ED68781D04573B00C31C2F /* Order */,
 				66ED68721D0456A300C31C2F /* DetailShop */,
 				66ED68711D04568700C31C2F /* MainShop */,
@@ -467,6 +576,8 @@
 		66AEE9E51CFC6C0200AF02D3 /* SVXShopView */ = {
 			isa = PBXGroup;
 			children = (
+				665FE89C1D3BAEAA000DCAE4 /* SXShoppingCartTableViewCell.h */,
+				665FE89D1D3BAEAA000DCAE4 /* SXShoppingCartTableViewCell.m */,
 				66ED68A11D06B4B900C31C2F /* EditView */,
 				66ED68951D059D7600C31C2F /* ChooseAddress */,
 				66ED68791D04574700C31C2F /* OrderView */,
@@ -612,6 +723,12 @@
 		66ED69251D0706BF00C31C2F /* SVXUserView */ = {
 			isa = PBXGroup;
 			children = (
+				665FE8601D3BADFE000DCAE4 /* SVXHeaderView.h */,
+				665FE8611D3BADFE000DCAE4 /* SVXHeaderView.m */,
+				665FE8621D3BADFE000DCAE4 /* SVXOrderListTableViewCell.h */,
+				665FE8631D3BADFE000DCAE4 /* SVXOrderListTableViewCell.m */,
+				665FE8641D3BADFE000DCAE4 /* SVXUserTableViewCell.h */,
+				665FE8651D3BADFE000DCAE4 /* SVXUserTableViewCell.m */,
 			);
 			path = SVXUserView;
 			sourceTree = "<group>";
@@ -840,6 +957,7 @@
 				662CA4E11CFB36D60087D788 /* SVXHomeViewController.m in Sources */,
 				662CA4ED1CFB3B950087D788 /* SVXDetailTableViewCell.m in Sources */,
 				666A42D31CFED4590058C5AA /* SVXShopListTableViewCell.m in Sources */,
+				665FE8971D3BAE7D000DCAE4 /* SVXPersonalViewController.m in Sources */,
 				66AEE9E91CFC6C1300AF02D3 /* SVXShopViewController.m in Sources */,
 				666A42E51D008B6E0058C5AA /* SVXDetailShopViewController.m in Sources */,
 				666B57771D01E7B300D78605 /* SVXDetailHeadView.m in Sources */,
@@ -847,27 +965,43 @@
 				3B0E8D5A1CF761D7003F39C8 /* SVXTabBarViewController.m in Sources */,
 				3B0E8D791CF7654C003F39C8 /* SVXUserViewController.m in Sources */,
 				666099B61CF74B90001FAB4E /* AppDelegate.m in Sources */,
+				665FE8811D3BAE74000DCAE4 /* SVXPersonalCell2.m in Sources */,
+				665FE8951D3BAE7D000DCAE4 /* SVXChangeheadViewController.m in Sources */,
 				666CFA7B1D0271A9008AE70F /* SVXIntroductionTableViewCell.m in Sources */,
 				666CFA7F1D02C515008AE70F /* SVXDetailShopView.m in Sources */,
+				665FE86C1D3BAE24000DCAE4 /* SVXHeaderModel.m in Sources */,
 				66ED687D1D04592300C31C2F /* SVXOrderTitleTableViewCell.m in Sources */,
 				662CA4E91CFB3A950087D788 /* SVXSearchViewController.m in Sources */,
+				665FE8681D3BADFE000DCAE4 /* SVXUserTableViewCell.m in Sources */,
+				665FE8821D3BAE74000DCAE4 /* SVXSettingTableViewCell.m in Sources */,
 				663F2AA61CF60E0600F23D40 /* main.m in Sources */,
 				66ED689C1D059DA700C31C2F /* SVXChooseAddTableViewCell.m in Sources */,
+				665FE8961D3BAE7D000DCAE4 /* SVXPasswordViewController.m in Sources */,
 				66D2FE491D041E1100ECB60A /* SVXIndBottomView.m in Sources */,
 				66ED69231D06F25F00C31C2F /* SVXPayViewController.m in Sources */,
 				662CA4E41CFB377E0087D788 /* SVXDetailViewController.m in Sources */,
 				666A42E21D0063B20058C5AA /* SVXIntroduceViewController.m in Sources */,
 				66ED68941D059A8300C31C2F /* SVXChooseAddViewController.m in Sources */,
 				66ED68751D0456CE00C31C2F /* SVXOrderViewController.m in Sources */,
+				665FE8941D3BAE7D000DCAE4 /* SVXBindingViewController.m in Sources */,
+				665FE89E1D3BAEAA000DCAE4 /* SXShoppingCartTableViewCell.m in Sources */,
+				665FE8801D3BAE74000DCAE4 /* SVXPersonalCell.m in Sources */,
+				665FE89B1D3BAEA0000DCAE4 /* SVXShoppingCartViewController.m in Sources */,
+				665FE8921D3BAE7D000DCAE4 /* AddressViewController.m in Sources */,
 				66AEE9EF1CFC6C4D00AF02D3 /* SVXShopListViewController.m in Sources */,
+				665FE8931D3BAE7D000DCAE4 /* SexTableViewController.m in Sources */,
 				B2E2A9B01CF97464009DE9F6 /* SVXLoginViewController.m in Sources */,
 				66ED69201D06EDDE00C31C2F /* SVXPickerViewViewController.m in Sources */,
 				66ED688E1D058F5000C31C2F /* SVXOrderFootView.m in Sources */,
+				665FE87F1D3BAE74000DCAE4 /* SVXNightTableViewCell.m in Sources */,
 				66ED68A51D06B4D100C31C2F /* SVXEditTableViewCell.m in Sources */,
 				66ED68AA1D06BD8F00C31C2F /* SVXEditAddTableViewCell.m in Sources */,
 				666099B71CF74B90001FAB4E /* ViewController.m in Sources */,
+				665FE8981D3BAE7D000DCAE4 /* SVXSettingViewController.m in Sources */,
 				662CA4F11CFC26D90087D788 /* SVXRecomViewController.m in Sources */,
 				66ED69281D0706D800C31C2F /* SVXFeedBackViewController.m in Sources */,
+				665FE8671D3BADFE000DCAE4 /* SVXOrderListTableViewCell.m in Sources */,
+				665FE8661D3BADFE000DCAE4 /* SVXHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

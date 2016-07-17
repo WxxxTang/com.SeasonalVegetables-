@@ -10,4 +10,6 @@
 
 @interface SVXUserViewController : UIViewController
 
+@property(nonatomic,strong) UITableView *tableview;
+
 @end
