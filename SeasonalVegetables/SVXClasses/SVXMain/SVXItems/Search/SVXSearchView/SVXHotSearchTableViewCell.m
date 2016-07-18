@@ -36,4 +36,21 @@
     [self.hotDelegate detailHotButtonAction:(UIButton *)sender];
 }
 
+- (void)updateSkin {
+    BOOL currentSkinModel = [[[NSUserDefaults standardUserDefaults] stringForKey:@"NightIsOnColor"] boolValue];
+    if (currentSkinModel == YES) {
+        self.contentView.backgroundColor = [UIColor colorWithRed:40/255.0 green:36/255.0  blue:40/255.0  alpha:1.0];
+        self.hotButton1.backgroundColor = [UIColor darkGrayColor];
+        self.hotButton2.backgroundColor = [UIColor darkGrayColor];
+        self.hotButton3.backgroundColor = [UIColor darkGrayColor];
+        self.hotButton4.backgroundColor = [UIColor darkGrayColor];
+    } else {//日间模式
+        self.contentView.backgroundColor = [UIColor whiteColor];
+        self.hotButton1.backgroundColor = [UIColor colorWithRed:243/255.0 green:243/255.0  blue:243/255.0  alpha:1.0];
+        self.hotButton2.backgroundColor = [UIColor colorWithRed:243/255.0 green:243/255.0  blue:243/255.0  alpha:1.0];
+        self.hotButton3.backgroundColor = [UIColor colorWithRed:243/255.0 green:243/255.0  blue:243/255.0  alpha:1.0];
+        self.hotButton4.backgroundColor = [UIColor colorWithRed:243/255.0 green:243/255.0  blue:243/255.0  alpha:1.0];
+    }
+}
+
 @end

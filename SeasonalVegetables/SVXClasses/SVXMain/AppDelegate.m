@@ -17,9 +17,32 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-//    SVXTabBarViewController * tab =[[SVXTabBarViewController alloc] init];
-//    self.window.rootViewController = tab;
+    
+    //这里初始化判断变量
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"everLaunched"]) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"everLaunched"];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
+    }
+    else {
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
+    }
+    //这里判断是否为第一次
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
+        NSLog( @"firstLaunch!");
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setBool:YES forKey:@"isLogin"];
+        [defaults setObject:@"游客13801" forKey:@"昵称"];
+        [defaults setObject:@"西安" forKey:@"所在城市"];
+        [defaults setObject:@"你既知人生如戏，更应该尽力演出，搭起的舞台过了一幕又沉入暗中。此刻你在台下仰望，且把你的艳美哀伤毫不吝惜交给我" forKey:@"个人签名"];
+        UIImage *img =[UIImage imageNamed:@"Oval-1"];
+        NSData *imgData =UIImagePNGRepresentation(img);
+        [defaults setObject:imgData forKey:@"usericon"];
+        [defaults setInteger:20 forKey:@"age"];
+        [defaults setObject:@"男"  forKey:@"性别"];//YES表示性别为男性
+        
+        [defaults synchronize];
+    }
 
     SVXLoginViewController *vc =[[SVXLoginViewController alloc] init];
     self.window.rootViewController = vc;

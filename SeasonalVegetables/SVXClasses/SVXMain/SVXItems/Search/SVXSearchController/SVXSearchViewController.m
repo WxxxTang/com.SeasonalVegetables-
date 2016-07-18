@@ -15,25 +15,46 @@ static NSString * const kHotSearchCell = @"kHotSearchCell";
 
 @property (nonatomic, strong) UISearchBar   *searchBar;
 @property (nonatomic, strong) UITableView   *tableView;
+@property (nonatomic, strong) UIView        *searchView;
 
 @end
 
 @implementation SVXSearchViewController
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateSkinModel) name:SVXNotification object:nil];
+    
     [self p_initWithNavigationBarItem];
     [self p_setupSearchBar];
-    
     [self p_setupTableView];
+    
+    [self updateSkinModel];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)updateSkinModel {
+    BOOL currentSkinModel = [[[NSUserDefaults standardUserDefaults] stringForKey:@"NightIsOnColor"] boolValue];
+    if (currentSkinModel == YES) {
+        self.view.backgroundColor = [UIColor colorWithRed:34/255.0 green:30/255.0 blue:33/255.0 alpha:1.0];
+        self.tableView.backgroundColor = [UIColor colorWithRed:34/255.0 green:30/255.0 blue:33/255.0 alpha:1.0];
+    } else {//日间模式
+        self.view.backgroundColor = [UIColor whiteColor];
+        self.tableView.backgroundColor = [UIColor whiteColor];
+    }
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark - 设置navigationBar上的Item
@@ -59,21 +80,27 @@ static NSString * const kHotSearchCell = @"kHotSearchCell";
 
 #pragma mark - 设置搜索栏
 - (void)p_setupSearchBar {
-    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 4, SVXWidth - 130, 21)];
+    self.searchView = nil;
+    if ([[UIDevice currentDevice].model isEqualToString:@"iPad"]) {
+        self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 4, 580, 21)];
+        self.searchView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 580, 30)];
+    } else if([[UIDevice currentDevice].model isEqualToString:@"iPhone"]) {
+        self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 4, self.view.frame.size.width - 130, 21)];
+        self.searchView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width - 130, 30)];
+    }
+    
     self.searchBar.delegate = self;
     self.searchBar.placeholder = @"搜你想搜";
-    [self.navigationController.navigationBar addSubview:self.searchBar];
-    UIView *searchView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SVXWidth - 130, 30)];
-    searchView.backgroundColor = [UIColor whiteColor];
-    searchView.layer.cornerRadius = 10;
-    [searchView addSubview:self.searchBar];
+    self.searchView.backgroundColor = [UIColor whiteColor];
+    self.searchView.layer.cornerRadius = 10;
+    [self.searchView addSubview:self.searchBar];
     
-    self.navigationItem.titleView = searchView;
+    self.navigationItem.titleView = self.searchView;
 }
 
 #pragma mark - setupTableView
 - (void)p_setupTableView {
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 64)
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)
                                                   style:UITableViewStyleGrouped];
     self.tableView.backgroundColor = [UIColor colorWithRed:247 / 255.0 green:247 / 255.0 blue:247 / 255.0 alpha:1];
     self.tableView.delegate = self;
@@ -91,6 +118,14 @@ static NSString * const kHotSearchCell = @"kHotSearchCell";
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SVXHotSearchTableViewCell class]) bundle:nil]
          forCellReuseIdentifier:kHotSearchCell];
+    
+    //约束tableView
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).offset(0);
+        make.right.equalTo(self.view.mas_right).offset(0);
+        make.top.equalTo(self.view.mas_top).offset(0);
+        make.bottom.equalTo(self.view.mas_bottom).offset(0);
+    }];
     
     
 }
@@ -120,6 +155,8 @@ static NSString * const kHotSearchCell = @"kHotSearchCell";
     if (indexPath.section == 0) {
         cell = [tableView dequeueReusableCellWithIdentifier:kHotSearchCell];
         cell.hotDelegate = self;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        [cell updateSkin];
     }
     
     return cell;
