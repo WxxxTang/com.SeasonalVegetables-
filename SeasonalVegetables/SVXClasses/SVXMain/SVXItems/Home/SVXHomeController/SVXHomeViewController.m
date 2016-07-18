@@ -56,8 +56,14 @@ static int const kLineWidth = 50;
     return _bottomLine;
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateSkinModel) name:SVXNotification object:nil];
     
     [self p_initWithNavigationBarItem];
     [self p_setupSearchBar];
@@ -66,6 +72,8 @@ static int const kLineWidth = 50;
     [self p_setupContainScroller];
     [self p_setupChildViewController];
     [self p_setupTitle];
+    
+    [self updateSkinModel];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -79,6 +87,17 @@ static int const kLineWidth = 50;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)updateSkinModel {
+    BOOL currentSkinModel = [[[NSUserDefaults standardUserDefaults] stringForKey:@"NightIsOnColor"] boolValue];
+    if (currentSkinModel == YES) {
+        self.titleScroller.backgroundColor = [UIColor colorWithRed:34/255.0 green:30/255.0 blue:33/255.0 alpha:1.0];
+        self.containScroller.backgroundColor = [UIColor colorWithRed:34/255.0 green:30/255.0 blue:33/255.0 alpha:1.0];
+    } else {//日间模式
+        self.titleScroller.backgroundColor = [UIColor whiteColor];
+        self.containScroller.backgroundColor = [UIColor whiteColor];
+    }
 }
 
 #pragma mark - 设置navigationBar上的Item

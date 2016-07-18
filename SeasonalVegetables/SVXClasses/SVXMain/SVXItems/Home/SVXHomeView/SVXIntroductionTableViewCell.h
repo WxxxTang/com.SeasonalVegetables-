@@ -12,4 +12,6 @@
 
 - (void)dicForCellData:(NSDictionary *)dic;
 
+- (void)updateSkin;
+
 @end

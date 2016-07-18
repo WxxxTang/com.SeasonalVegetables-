@@ -31,4 +31,13 @@
     self.containLabel.text = [dic objectForKey:@"containLabel"];
 }
 
+- (void)updateSkin {
+    BOOL currentSkinModel = [[[NSUserDefaults standardUserDefaults] stringForKey:@"NightIsOnColor"] boolValue];
+    if (currentSkinModel == YES) {
+        self.contentView.backgroundColor = [UIColor colorWithRed:40/255.0 green:36/255.0  blue:40/255.0  alpha:1.0];
+    } else {//日间模式
+        self.contentView.backgroundColor = [UIColor whiteColor];
+    }
+}
+
 @end

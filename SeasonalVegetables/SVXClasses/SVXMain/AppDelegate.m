@@ -17,7 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    
     //这里初始化判断变量
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"everLaunched"]) {
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"everLaunched"];

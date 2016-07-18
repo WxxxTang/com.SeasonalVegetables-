@@ -18,4 +18,6 @@
 
 @property (nonatomic, weak) id<SVXHotDelegate> hotDelegate;
 
+- (void)updateSkin;
+
 @end

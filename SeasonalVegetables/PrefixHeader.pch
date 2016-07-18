@@ -21,4 +21,6 @@
 #define SVXWidth    [UIScreen mainScreen].bounds.size.width
 #define SVXHeight   [UIScreen mainScreen].bounds.size.height
 
+#define SVXNotification @"SVXNotificationChangeSkin"
+
 #endif /* PrefixHeader_pch */

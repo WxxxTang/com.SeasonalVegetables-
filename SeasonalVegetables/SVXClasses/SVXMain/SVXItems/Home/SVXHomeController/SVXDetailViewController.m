@@ -21,15 +21,32 @@ static NSString * const kSVXDetailCell = @"kSVXDetailCell";
 
 @implementation SVXDetailViewController
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateSkinModel) name:SVXNotification object:nil];
+    
     [self p_setupTableView];
+    [self updateSkinModel];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)updateSkinModel {
+    BOOL currentSkinModel = [[[NSUserDefaults standardUserDefaults] stringForKey:@"NightIsOnColor"] boolValue];
+    if (currentSkinModel == YES) {
+        self.tableView.backgroundColor = [UIColor blackColor];
+    } else {//日间模式
+        self.tableView.backgroundColor = [UIColor colorWithRed:247 / 255.0 green:247 / 255.0 blue:247 / 255.0 alpha:1];
+    }
+    [self.tableView reloadData];
 }
 
 #pragma mark - setupTableView
@@ -84,6 +101,7 @@ static NSString * const kSVXDetailCell = @"kSVXDetailCell";
                           @"vetaName" : @"秋葵",
                           @"moreName" : @"秋葵(学名：Abelmoschus esculentus)亦称黄秋葵、咖啡黄葵，俗名羊角豆、潺茄，性喜温暖，原产地为非洲今日埃塞俄比亚附近以及亚洲热带，当今黄秋葵已成为人们所热追高档营养保健蔬菜，风靡全球。它的可食用部分是果荚，又分绿色和红色两种，其脆嫩多汁，滑润不腻，香味独特，深受百姓青睐"};
     [cell dicForCellData:dic];
+    [cell updateSkin];
     
     return cell;
 }

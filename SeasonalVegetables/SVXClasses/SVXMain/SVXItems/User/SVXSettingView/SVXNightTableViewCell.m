@@ -22,11 +22,9 @@
     [self.contentView addSubview:self.labelmod];
     self.labelmod.textColor =[UIColor grayColor];
     self.labelmod.font =[UIFont fontWithName:@"PingFang SC" size:15];
-//    self.labelmod.text =@"夜间模式";
     
     self.Nigthswitch =[[UISwitch alloc] init];
     [self.contentView addSubview:self.Nigthswitch];
-    self.Nigthswitch.on =NO;
     
     
     [self.labelmod makeConstraints:^(MASConstraintMaker *make) {

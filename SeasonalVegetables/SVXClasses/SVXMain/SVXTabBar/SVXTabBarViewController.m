@@ -46,8 +46,8 @@
     //    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:255/255.0
     //                                                               green:192/255.0 blue:203/255.0 alpha:0.5]];
 //    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:249/255.0
-                                                                  green:242/255.0 blue:222/255.0 alpha:1]];
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:249/255.0
+//                                                                  green:242/255.0 blue:222/255.0 alpha:1]];
     //关闭高斯模糊
     [UINavigationBar appearance].translucent = NO;
     //去除导航栏上返回按钮的文字
@@ -62,6 +62,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadTabBar];
+    
+    [self updateSkinModel];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateSkinModel) name:SVXNotification object:nil];
+}
+
+-(void)updateSkinModel {
+    BOOL currentSkinModel = [[[NSUserDefaults standardUserDefaults] stringForKey:@"NightIsOnColor"] boolValue];
+    if (currentSkinModel == YES) {
+        self.tabBar.barTintColor = [UIColor colorWithRed:34/255.0 green:30/255.0 blue:33/255.0 alpha:1.0];
+    } else {//日间模式
+        self.tabBar.barTintColor = [UIColor whiteColor];
+    }
 }
 
 - (void)addChildViewController:(UIViewController *)childController
@@ -89,6 +101,10 @@
 //    nav.tabBarItem.badgeValue =@"111";
     
     [self addChildViewController: nav];
+}
+
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

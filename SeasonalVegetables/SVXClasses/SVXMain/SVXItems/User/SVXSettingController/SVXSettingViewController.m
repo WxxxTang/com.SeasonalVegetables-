@@ -23,8 +23,11 @@
 static NSString *cellID =@"settingCell";
 static NSString *cellSwitchID =@"nightCell";
 
-- (void) viewWillAppear:(BOOL)animated{
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -35,11 +38,10 @@ static NSString *cellSwitchID =@"nightCell";
     self.tableView.separatorColor =[UIColor clearColor];
     [self.tableView setTableFooterView:self.btnexit];
     
-    // Uncomment the following line to preserve selection between presentations.
-//     self.clearsSelectionOnViewWillAppear = NO;
+    [self updateSkinModel];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateSkinModel) name:SVXNotification object:nil];
+
 }
 - (NSArray *)settingarr{
     if (_settingarr==nil) {
@@ -51,7 +53,7 @@ static NSString *cellSwitchID =@"nightCell";
 
 - (UIButton *)btnexit{
     if (_btnexit ==nil) {
-        _btnexit =[UIButton buttonWithType:UIButtonTypeCustom];
+        _btnexit = [UIButton buttonWithType:UIButtonTypeCustom];
         _btnexit.backgroundColor =[UIColor colorWithRed:254/255.0
                                                   green:178/255.0
                                                    blue:178/255.0 alpha:1];
@@ -77,13 +79,23 @@ static NSString *cellSwitchID =@"nightCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    BOOL isNight = [[[NSUserDefaults standardUserDefaults] objectForKey:@"NightIsOnColor"] boolValue];
+    
     if (indexPath.row==3) {
         SVXNightTableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:cellSwitchID];
-        [cell.Nigthswitch addTarget:self action:@selector(changeNight:)
-                   forControlEvents:UIControlEventTouchUpInside];
+        [cell.Nigthswitch addTarget:self action:@selector(changeNight:) forControlEvents:UIControlEventValueChanged];
         cell.selectionStyle =UITableViewCellSelectionStyleNone;
-        cell.labelmod.text =@"夜间模式";
-        cell.Nigthswitch.on =NO;
+        cell.labelmod.text = @"夜间模式";
+        cell.Nigthswitch.on = isNight;
+        
+        if (isNight == YES) {
+            cell.backgroundColor = [UIColor colorWithRed:40/255.0 green:36/255.0  blue:40/255.0  alpha:1.0];
+            cell.labelmod.textColor = [UIColor lightGrayColor];
+        } else {
+            cell.backgroundColor = [UIColor whiteColor];
+            cell.labelmod.textColor = [UIColor grayColor];
+        }
+        
         return cell;
     }
     else{
@@ -93,24 +105,45 @@ static NSString *cellSwitchID =@"nightCell";
         cell.textLabel.font =[UIFont fontWithName:@"PingFang SC" size:15];
         cell.accessoryType =UITableViewCellAccessoryDisclosureIndicator;
         cell.selectionStyle =UITableViewCellSelectionStyleNone;
+        
+        if (isNight == YES) {
+            cell.backgroundColor = [UIColor colorWithRed:40/255.0 green:36/255.0  blue:40/255.0  alpha:1.0];
+            cell.textLabel.textColor = [UIColor lightGrayColor];
+        } else {
+            cell.backgroundColor = [UIColor whiteColor];
+            cell.textLabel.textColor = [UIColor grayColor];
+        }
+        
         return cell;
 
     }
 }
 - (void)changeNight:(id)sender{
     
-    NSLog(@"%d", [sender isOn]);
+    if ([sender isOn] == 1) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"NightIsOnColor"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+    } else {
+        
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"NightIsOnColor"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
     
-//    if ([sender isOn] == 1) {
-//        [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
-//        [[UIView appearance] setBackgroundColor:[UIColor blackColor]];
-//        [[UILabel appearance] setTintColor:[UIColor whiteColor]];
-//        [[UITabBar appearance] setBackgroundColor:[UIColor blackColor]];
-//    } else {
-//        [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:249/255.0
-//                                                                      green:242/255.0 blue:222/255.0 alpha:1]];
-//    }
+    [self.tableView reloadData];
+    [[NSNotificationCenter defaultCenter] postNotificationName:SVXNotification object:self];
     
+}
+
+- (void)updateSkinModel {
+    BOOL currentSkinModel = [[[NSUserDefaults standardUserDefaults] stringForKey:@"NightIsOnColor"] boolValue];
+    if (currentSkinModel == YES) {
+        self.tableView.backgroundColor = [UIColor colorWithRed:34/255.0 green:30/255.0 blue:33/255.0 alpha:1.0];
+        self.btnexit.backgroundColor = [UIColor colorWithRed:254/255.0 green:178/255.0 blue:178/255.0 alpha:0.7];
+    } else {//日间模式
+        self.tableView.backgroundColor = [UIColor whiteColor];
+        self.btnexit.backgroundColor = [UIColor colorWithRed:254/255.0 green:178/255.0 blue:178/255.0 alpha:1];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

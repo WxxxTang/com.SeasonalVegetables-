@@ -22,6 +22,10 @@ static NSString * const kSVXRecomCell = @"kSVXRecomCell";
 
 @implementation SVXRecomViewController
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (NSArray *)titleArrays {
     if (_titleArrays == nil) {
         _titleArrays = @[@"今日适宜", @"养生必备", @"老年推荐", @"小孩推荐"];
@@ -34,12 +38,26 @@ static NSString * const kSVXRecomCell = @"kSVXRecomCell";
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateSkinModel) name:SVXNotification object:nil];
+    
     [self p_setupTableView];
+    
+    [self updateSkinModel];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)updateSkinModel {
+    BOOL currentSkinModel = [[[NSUserDefaults standardUserDefaults] stringForKey:@"NightIsOnColor"] boolValue];
+    if (currentSkinModel == YES) {
+        self.tableView.backgroundColor = [UIColor blackColor];
+    } else {//日间模式
+        self.tableView.backgroundColor = [UIColor colorWithRed:247 / 255.0 green:247 / 255.0 blue:247 / 255.0 alpha:1];
+    }
+    [self.tableView reloadData];
 }
 
 #pragma mark - setupTableView
@@ -89,6 +107,7 @@ static NSString * const kSVXRecomCell = @"kSVXRecomCell";
                           @"vetaName" : @"莲藕",
                           @"moreName" : @"藕是莲藕的地下茎的膨大部分，莲藕属睡莲科。莲藕主要分布于长江流域和南方各省、秋、冬及春初均可采挖。 藕呈短圆柱形，外皮粗厚，光滑为灰白色或银灰色，内部白色；节部中央膨大，内有大小不同的孔道若干条，排列左右对称；体较重，质脆嫩，在我国食用栽培的莲 藕，可分为两大类：第一类为藕用种。其根茎较肥大，外皮白色，肉质脆嫩，味甜，产量高，结莲子不多；第二类为莲用种，莲较小，肉质稍带灰色，品质较差，但 结果多，主要采收莲子。 作为蔬菜食用以藕用种为主。莲藕，微甜而脆，十分爽口，可生食也可做菜，而且药用价值相当高，是老幼妇孺、体弱多病者上好的食品和滋补佳珍。"};
     [cell dicForCellData:dic];
+    [cell updateSkin];
     
     return cell;
 }

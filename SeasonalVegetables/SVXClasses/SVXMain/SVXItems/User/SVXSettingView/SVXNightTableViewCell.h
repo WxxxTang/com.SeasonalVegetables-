@@ -11,4 +11,5 @@
 @interface SVXNightTableViewCell : UITableViewCell
 @property (nonatomic,strong) UISwitch *Nigthswitch;
 @property (nonatomic,strong) UILabel *labelmod;
+
 @end

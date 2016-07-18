@@ -21,10 +21,15 @@ static NSString * const kInstroductCell = @"kInstroductCell";
 @property (nonatomic, strong) UITableView           *tableView;
 @property (nonatomic, strong) CAShapeLayer          *shapeLayer;
 @property (nonatomic, strong) SVXDetailHeadView     *svxHeadView;
+@property (nonatomic, strong) SVXIndBottomView      *svxInd;
 
 @end
 
 @implementation SVXIntroduceViewController
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 - (NSArray *)listArray {
     if (_listArray == nil) {
@@ -43,11 +48,14 @@ static NSString * const kInstroductCell = @"kInstroductCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateSkinModel) name:SVXNotification object:nil];
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self p_initWithNavigationBarItem];
     [self p_setupTableView];
     [self p_setupHeadView];
+    
+    [self updateSkinModel];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -60,6 +68,20 @@ static NSString * const kInstroductCell = @"kInstroductCell";
 - (void)viewWillLayoutSubviews {
     self.shapeLayer.frame = CGRectMake(self.view.frame.size.width / 2.0 - 30,
                                        self.svxHeadView.frame.size.height - 60, 60, 60);
+}
+
+- (void)updateSkinModel {
+    BOOL currentSkinModel = [[[NSUserDefaults standardUserDefaults] stringForKey:@"NightIsOnColor"] boolValue];
+    if (currentSkinModel == YES) {
+        self.tableView.backgroundColor = [UIColor blackColor];
+        self.svxHeadView.backgroundColor = [UIColor colorWithRed:40/255.0 green:36/255.0  blue:40/255.0  alpha:1.0];
+        self.svxInd.backgroundColor = [UIColor colorWithRed:40/255.0 green:36/255.0  blue:40/255.0  alpha:1.0];
+    } else {//日间模式
+        self.tableView.backgroundColor = [UIColor colorWithRed:247 / 255.0 green:247 / 255.0 blue:247 / 255.0 alpha:1];
+        self.svxHeadView.backgroundColor = [UIColor whiteColor];
+        self.svxInd.backgroundColor = [UIColor whiteColor];
+    }
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,14 +106,14 @@ static NSString * const kInstroductCell = @"kInstroductCell";
 #pragma mark - 初始化ScrollView
 - (void)p_setupTableView {
     
-    SVXIndBottomView *svxInd = [[SVXIndBottomView alloc] init];
-    svxInd.indDelegate = self;
-    svxInd.isSave = NO;
-    svxInd.layer.borderWidth = 0.5;
-    svxInd.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    [self.view addSubview:svxInd];
+    self.svxInd = [[SVXIndBottomView alloc] init];
+    self.svxInd.indDelegate = self;
+    self.svxInd.isSave = NO;
+    self.svxInd.layer.borderWidth = 0.5;
+    self.svxInd.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    [self.view addSubview:self.svxInd];
     
-    [svxInd mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.svxInd mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.equalTo(self.view);
         make.width.equalTo(self.view.mas_width);
         make.height.equalTo(44);
@@ -115,7 +137,7 @@ static NSString * const kInstroductCell = @"kInstroductCell";
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.equalTo(self.view);
-        make.bottom.equalTo(svxInd.mas_top).offset(0);
+        make.bottom.equalTo(_svxInd.mas_top).offset(0);
     }];
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SVXIntroductionTableViewCell class]) bundle:nil]
@@ -172,6 +194,7 @@ static NSString * const kInstroductCell = @"kInstroductCell";
     NSDictionary *dic = @{@"titleLabel" : self.listArray[indexPath.section],
                           @"containLabel" : self.containArray[indexPath.section]};
     [cell dicForCellData:dic];
+    [cell updateSkin];
     
     return cell;
 }
